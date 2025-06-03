@@ -1,14 +1,13 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - cryshansen
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - cryshansen/artographic_web
+  - cryshansen/python
+  - cryshansen/calendar
+  - cryshansen/netAPIs
+  - cryshansen/javaRepo
+  - cryshansen/GalleryLoader
+  - cryshansen/PayModel

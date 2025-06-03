@@ -2,96 +2,112 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
+      value: Crystal Hansen
     - name: Date of Birth
-      value: 14th March 1879
+      value: 1968
     - name: Languages
-      value: English, German
+      value: English
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: Computer Systems Technology diploma
+      institution: Northern Alberta Institute of Technology, Edmonton, Alberta
+      year: 2009
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
+        - Java, C#, .Net full stack development
+        - Databases - Oracle, MS SQL, Architecture, Crystal Reporting
+        - title: Team Project
           contents:
-            - Sub-description 1.
+            - Historical Building
             - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+    - title: BA Art & Art History
+      institution: University of Saskatchewan, Saskatoon, Saskatchewan
+      year: 2005
       description:
-        - Description 1.
-        - Description 2.
+        - Fine Art Study.
+        - Computer Science
+    - title: Multimedia Certificate
+      institution: University of Alberta Extension, Edmonton, Alberta
+      year: 2002
+      description:
+        - Front End Technologies
+        - Architecture and Databases
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Freelance Developer and Founder
+      institution: crystalhansenartographic
+      year: 2013 - current
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
+        - Personal Developer concepts
+        - Freelance web developments
+        - title: zackly-rite.ca
           contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+            - Massage Therapy one page site
+            - Booking system integration of AWS
+        - artog.co - social media website
+        - pinmento.com - mapping pin application for organization and photo collaborations
+    - title: Web Developer
+      institution: PGSTech, Montreal, Quebec
+      year: 2021.03 - 2025.04
       description:
-        - Description 1.
-        - Description 2.
+        - Developed new functionality and conversions of base php into content types, modules and features
+        - Integrations of APIs connecting third party systems.
+        - OAuth, RBA, CL/CI 
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+    - title: IT Risk Manager - Java developer
+      institution: Canadian Western Bank, Edmonton, Alberta.
+      year: 2018-2019
       description:
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
+    - title: IT Risk Analyst
+      institution: Canadian Western Bank, Edmonton, Alberta.
+      year: 2016 - 2018
+      description:
+
+    - title: Application Developer II
+      institution: Canadian Western Bank, Edmonton, Alberta.
+      year: 2013 - 2016
+      description:
+
+    - title: Web Developer II
+      institution: Canadian Western Bank, Edmonton, Alberta.
+      year: 2011 - 2013
+      description:
 
 - title: Open Source Projects
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
+    - title: <a href="https://github.com/cryshansen/calendar">calendar</a>
       year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+      description: A simple angular / node.js calendar connecting fullcalendar.js with a database.
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
+    - year: 2017
       items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
+        - Q3 2017 Pillars of Excellence Nominees
+        - Pillar of Excellence award is offered by CWB as a nomination platform by its employees to acknowledge one another on exceptional performance.
+    - year: 2003,2004, 2006, 2007
       items:
-        - Max Planck Medal
+        - Jason Lang Scholarship 
+        - Awarded for academic performance
 
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Modern Full Stack Development
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - React, Angular, TypeScript
+    - title: Back end Java & .Net Development
       items:
-        - Description 1.
-        - Description 2.
+        - WebAPI, Azure
+        - Spring Boot, Spring API's
 
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - <u>Hobbies:</u> Photography, Lightboxes, Soap making etc.
