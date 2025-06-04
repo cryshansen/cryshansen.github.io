@@ -144,11 +144,11 @@ newsletter:
 
 collections:
   books:
-    output: true
+    output: false
   news:
     defaults:
       layout: post
-    output: true
+    output: false
   projects:
     output: true
 
@@ -191,6 +191,12 @@ exclude:
   - README.md
   - readme_preview/
   - vendor
+  - _news/
+  - _pages/blog.md
+  - _pages/news.md
+  - _pages/profiles.md
+  - _posts/
+  - assets/jupyter/blog.ipynb
 keep_files:
   - CNAME
   - .nojekyll

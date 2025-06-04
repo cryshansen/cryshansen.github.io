@@ -27,9 +27,9 @@
       "name": "Crystal Hansen Artographic",
       "position": "Freelance web developments",
       "url": "https://crystalhansenartographic.com",
-      "startDate": "2013-01-01",
+      "startDate": "2025-04-04",
       "endDate": "present",
-      "summary": "Freelance and personal projects that expand on the foundational experience to move with modern times.",
+      "summary": "Freelance and personal projects that expand on the foundational experience to move within modern times. Booking App and small websites, Cloud and ChatGPT integrations",
       "highlights": ["Java", "Spring", "Spring Boot", "Spring APIs" , "React","Python","Flask","Node.js"]
     },
     {
@@ -64,7 +64,7 @@
         "position": "Application Developer II",
         "url": "https://cwbank.com",
         "startDate": "2013-09-01",
-        "endDate": "2016-04-01",
+        "endDate": "2016-09-01",
         "summary": "Developed ETL scripts, multithreading, documentation for new banking system migrations and applications",
         "highlights": [".Net","C#", "Javascript","MVC", "Oracle", "MS SQL","VB", "jQuery", "SSIS", "Billing Logs"]
     },
@@ -72,8 +72,8 @@
         "name": "Canadian Western Bank",
         "position": "Web Developer II",
         "url": "https://cwbank.com",
-        "startDate": "2021-03-01",
-        "endDate": "2013-04-01",
+        "startDate": "2011-12-04",
+        "endDate": "2013-09-01",
         "summary": "Developed new functionality and conversions of base php into content types, modules and features",
         "highlights": [".Net","VB","C#","Adobe Forms", "Javascript","MVC", "Oracle", "MS SQL", "jQuery", "Responsive", "CSS", "AJAX", "HTML5"]
     }
