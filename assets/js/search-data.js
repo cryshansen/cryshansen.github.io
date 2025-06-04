@@ -11,7 +11,7 @@ ninja.data = [{
     },
   },{id: "nav-projects",
           title: "projects",
-          description: "A growing collection of your cool projects.",
+          description: "A growing collection of different coding stacks of projects.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
@@ -102,11 +102,26 @@ ninja.data = [{
           description: "another project with an image 🎉",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
+            },},{id: "projects-artog-co-drupal-project",
+          title: 'Artog.co Drupal Project',
+          description: "Drupal compontents for Drupal websites and custom modules that span the versions from 8.7 through to 11 modules / theme components and integrations.Below are the projects and notable contributions.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/artog-co/";
             },},{id: "projects-drupal-development-projects",
           title: 'Drupal Development Projects',
-          description: "Drupal compontents for Drupal 8.7 through to Drupal 11 modules / theme components and integrations",
+          description: "Drupal compontents for Drupal websites and custom modules that span the versions from 8.7 through to 11 modules / theme components and integrations.Below are the projects and notable contributions.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/drupal-projects/";
+            },},{id: "projects-emtp-drupal-projects",
+          title: 'EMTP Drupal Projects',
+          description: "Drupal compontents for Drupal websites and custom modules that span the versions from 8.7 through to 11 modules / theme components and integrations.Below are the projects and notable contributions.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/drupal-projects/emtp/";
+            },},{id: "projects-pinmento-com-drupal-project",
+          title: 'Pinmento.com Drupal Project',
+          description: "Drupal custom website modules that span the versions from 8.7 through to 11 modules / theme components and integrations.Below are the projects and notable contributions.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/pinmento/";
             },},{
         id: 'social-email',
         title: 'email',
