@@ -57,11 +57,6 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/1_project/";
             },},{id: "projects-project-2",
           title: 'project 2',
           description: "a project with a background image and giscus comments",
@@ -117,6 +112,11 @@ ninja.data = [{
           description: "Drupal compontents for Drupal websites and custom modules that span the versions from 8.7 through to 11 modules / theme components and integrations.Below are the projects and notable contributions.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/drupal-projects/emtp/";
+            },},{id: "projects-fortune-ai",
+          title: 'Fortune ai',
+          description: "Fortune ai is a Java spring boot api connected to chatgpt with a &#39;category&#39; prompt. It returns a possitive message based on the topic",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/fortune-ai/";
             },},{id: "projects-pinmento-com-drupal-project",
           title: 'Pinmento.com Drupal Project',
           description: "Drupal custom website modules that span the versions from 8.7 through to 11 modules / theme components and integrations.Below are the projects and notable contributions.",
