@@ -1,25 +1,17 @@
 ---
 layout: page
-title: project 1
-description: with background image
+title: Fortune ai
+description: Fortune ai is a Java spring boot api connected to chatgpt with a 'category' prompt. It returns a possitive message based on the topic
 img: assets/img/12.jpg
 importance: 1
 category: work
 related_publications: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+Fortune-ai is a preliminary test of Java Spring Boot API development. The idea to represent a chatbot using chatgpt to provide prompting. It is simple to use and implement. 
+A test model is associated with pintmento.com as the front end display and integration with an AWS EC2 instance and an RDS database storage system.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+Proper Image layouts to come soon! Check back to find its packaged nicely visually. 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
