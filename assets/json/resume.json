@@ -3,10 +3,10 @@
     "name": "Crystal Hansen",
     "label": "Full Stack Developer",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
+    "email": "crystalhansen@crystalhansenartographic.com",
+    "phone": "(819) 213-5681",
     "url": "https://crystalhansenartographic.com",
-    "summary": "A web developer with multiple language and stack interests",
+    "summary": "A creative developer that bridges user experience and backend logic — all guided by clean, scaleable, modular code principles with a strong foundation in backend systems, data flow, modular architecture  and a focus on scalability, security, and performance.",
     "location": {
       "address": "250 Rue Gary-Carter",
       "postalCode": "H2R0B2",
@@ -30,20 +30,54 @@
       "startDate": "2013-01-01",
       "endDate": "present",
       "summary": "Freelance and personal projects that expand on the foundational experience to move with modern times.",
-      "highlights": ["Java", "Spring", "Spring Boot", "Spring APIs" , "React","Node.js"]
+      "highlights": ["Java", "Spring", "Spring Boot", "Spring APIs" , "React","Python","Flask","Node.js"]
     },
     {
-    
-      "name": "PGSTech",
-      "position": "Web Developer",
-      "url": "https://emtp.com",
-      "startDate": "2021-03-01",
-      "endDate": "2021-04-01",
-      "summary": "Developed new functionality and conversions of base php into content types, modules and features",
-      "highlights": ["Drupal","Node.js", "Python"]
-  }
+        "name": "PGSTech",
+        "position": "Web Developer",
+        "url": "https://emtp.com",
+        "startDate": "2021-03-01",
+        "endDate": "2025-04-01",
+        "summary": "Developed new functionality and conversions of base php into content types, modules and features",
+        "highlights": ["Drupal","Node.js", "Python"]
+    }, 
+    {
+        "name": "Canadian Western Bank",
+        "position": "Manager, Risk Technology and Model Deployment",
+        "url": "https://cwbank.com",
+        "startDate": "2018-09-01",
+        "endDate": "2019-09-01",
+        "summary": "Develop web forms based on Statistical models for Credit Risk Analysis and Reporting",
+        "highlights": ["Java","Tensorflow", "Javascript","MVC", "SAS", "SQL", "Angular.js", "jQuery", "Responsive", "CSS", "AJAX", "HTML5", "Eclipse"]
+    },
+    {
+        "name": "Canadian Western Bank",
+        "position": "IT Risk Analyst, Web Developer",
+        "url": "https://cwbank.com",
+        "startDate": "2016-09-01",
+        "endDate": "2018-09-01",
+        "summary": "Developed new functionality and conversions of base php into content types, modules and features",
+        "highlights": ["Java","Tensorflow", "Javascript","MVC", "SAS", "SQL", "Angular.js", "jQuery", "Responsive", "CSS", "AJAX", "HTML5", "Eclipse"]
+    },
+    {
+        "name": "Canadian Western Bank",
+        "position": "Application Developer II",
+        "url": "https://cwbank.com",
+        "startDate": "2013-09-01",
+        "endDate": "2016-04-01",
+        "summary": "Developed ETL scripts, multithreading, documentation for new banking system migrations and applications",
+        "highlights": [".Net","C#", "Javascript","MVC", "Oracle", "MS SQL","VB", "jQuery", "SSIS", "Billing Logs"]
+    },
+    {
+        "name": "Canadian Western Bank",
+        "position": "Web Developer II",
+        "url": "https://cwbank.com",
+        "startDate": "2021-03-01",
+        "endDate": "2013-04-01",
+        "summary": "Developed new functionality and conversions of base php into content types, modules and features",
+        "highlights": [".Net","VB","C#","Adobe Forms", "Javascript","MVC", "Oracle", "MS SQL", "jQuery", "Responsive", "CSS", "AJAX", "HTML5"]
+    }
   ],
-  
   "education": [
     {
       "institution": "Northern Alberta Institute of Technology, Edmonton, Alberta",
