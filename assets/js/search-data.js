@@ -102,6 +102,11 @@ ninja.data = [{
           description: "another project with an image 🎉",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
+            },},{id: "projects-drupal-development-projects",
+          title: 'Drupal Development Projects',
+          description: "Drupal compontents for Drupal 8.7 through to Drupal 11 modules / theme components and integrations",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/drupal-projects/";
             },},{
         id: 'social-email',
         title: 'email',
