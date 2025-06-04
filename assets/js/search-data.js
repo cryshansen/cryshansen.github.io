@@ -110,25 +110,18 @@ ninja.data = [{
           window.open("mailto:%63%72%79%73%74%61%6C%68%61%6E%73%65%6E@%63%72%79%73%74%61%6C%68%61%6E%73%65%6E%61%72%74%6F%67%72%61%70%68%69%63.%63%6F%6D", "_blank");
         },
       },{
-        id: 'social-inspire',
-        title: 'Inspire HEP',
+        id: 'social-github',
+        title: 'GitHub',
         section: 'Socials',
         handler: () => {
-          window.open("https://inspirehep.net/authors/", "_blank");
+          window.open("https://github.com/cryshansen", "_blank");
         },
       },{
-        id: 'social-rss',
-        title: 'RSS Feed',
+        id: 'social-linkedin',
+        title: 'LinkedIn',
         section: 'Socials',
         handler: () => {
-          window.open("/feed.xml", "_blank");
-        },
-      },{
-        id: 'social-scholar',
-        title: 'Google Scholar',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://scholar.google.com/citations?user=", "_blank");
+          window.open("https://www.linkedin.com/in/crystalhansenartographic", "_blank");
         },
       },{
         id: 'social-custom_social',
