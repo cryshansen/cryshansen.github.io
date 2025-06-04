@@ -67,11 +67,6 @@ ninja.data = [{
           description: "another without an image",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_project/";
-            },},{id: "projects-project-5",
-          title: 'project 5',
-          description: "a project with a background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/5_project/";
             },},{id: "projects-project-6",
           title: 'project 6',
           description: "a project with no image",
@@ -97,6 +92,11 @@ ninja.data = [{
           description: "Drupal compontents for Drupal websites and custom modules that span the versions from 8.7 through to 11 modules / theme components and integrations.Below are the projects and notable contributions.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/artog-co/";
+            },},{id: "projects-bookit",
+          title: 'Bookit',
+          description: "A simple booking system API with Java Spring Boot AWS cloud environment EC2 and RDS",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/bookit/";
             },},{id: "projects-drupal-development-projects",
           title: 'Drupal Development Projects',
           description: "Drupal compontents for Drupal websites and custom modules that span the versions from 8.7 through to 11 modules / theme components and integrations.Below are the projects and notable contributions.",
