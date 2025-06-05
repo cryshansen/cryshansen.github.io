@@ -3,7 +3,7 @@ layout: page
 title: Pinmento.com Drupal Project
 description: Drupal custom website modules that span the versions from 8.7 through to 11 modules / theme components and integrations.Below are the projects and notable contributions.
 img: assets/img/9.jpg
-importance: 1
+importance: 4
 category: drupal
 related_publications: true
 ---

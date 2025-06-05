@@ -3,7 +3,7 @@ layout: page
 title: Curiosity 
 description: Some fun creative insiprations to evolve coming soon
 img:
-importance: 4
+importance: 3
 category: fun
 ---
 

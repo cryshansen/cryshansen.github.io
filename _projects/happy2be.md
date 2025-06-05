@@ -3,7 +3,7 @@ layout: page
 title: Happy2be
 description: Furthering my exploration in Java Spring Boot APIs and cloud technologies
 img: assets/img/12.jpg
-importance: 2
+importance: 3
 category: java
 giscus_comments: true
 ---

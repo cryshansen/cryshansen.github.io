@@ -3,7 +3,7 @@ layout: page
 title: Fortune ai
 description: Fortune ai is a Java spring boot api connected to chatgpt with a 'category' prompt. It returns a possitive message based on the topic
 img: assets/img/12.jpg
-importance: 1
+importance: 2
 category: java
 related_publications: true
 ---

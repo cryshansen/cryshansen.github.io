@@ -3,7 +3,7 @@ layout: page
 title: What's next
 description: My next project - what creative inspiration driving curiousities
 img:
-importance: 3
+importance: 1
 category: fun
 ---
 
