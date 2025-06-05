@@ -14,7 +14,7 @@ A test model is associated with pintmento.com as the front end display and integ
 
 Visit the repo and kick start your project! 
 
-- [Happy2be Repository](https://github.com/cryshansen/happy2be)
+- [Fortune-AI Repository](https://github.com/cryshansen/fortune-ai)
 Proper Image layouts to come soon! Check back to find its packaged nicely visually. 
 
 <div class="row">
