@@ -62,31 +62,11 @@ ninja.data = [{
           description: "a project that redirects to another website",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
-            },},{id: "projects-project-4",
-          title: 'project 4',
-          description: "another without an image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/4_project/";
-            },},{id: "projects-project-6",
-          title: 'project 6',
-          description: "a project with no image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/6_project/";
-            },},{id: "projects-project-7",
-          title: 'project 7',
-          description: "with background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/7_project/";
             },},{id: "projects-project-8",
           title: 'project 8',
           description: "an other project with a background image and giscus comments",
           section: "Projects",handler: () => {
               window.location.href = "/projects/8_project/";
-            },},{id: "projects-project-9",
-          title: 'project 9',
-          description: "another project with an image 🎉",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/9_project/";
             },},{id: "projects-artog-co-drupal-project",
           title: 'Artog.co Drupal Project',
           description: "Drupal compontents for Drupal websites and custom modules that span the versions from 8.7 through to 11 modules / theme components and integrations.Below are the projects and notable contributions.",
@@ -97,6 +77,16 @@ ninja.data = [{
           description: "A simple booking system API with Java Spring Boot AWS cloud environment EC2 and RDS",
           section: "Projects",handler: () => {
               window.location.href = "/projects/bookit/";
+            },},{id: "projects-curiosity",
+          title: 'Curiosity',
+          description: "Some fun creative insiprations to evolve coming soon",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/curiosity/";
+            },},{id: "projects-dream-big",
+          title: 'Dream Big',
+          description: "Dream big fly high 🎉",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/dream-big/";
             },},{id: "projects-drupal-development-projects",
           title: 'Drupal Development Projects',
           description: "Drupal compontents for Drupal websites and custom modules that span the versions from 8.7 through to 11 modules / theme components and integrations.Below are the projects and notable contributions.",
@@ -122,6 +112,16 @@ ninja.data = [{
           description: "Drupal custom website modules that span the versions from 8.7 through to 11 modules / theme components and integrations.Below are the projects and notable contributions.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/pinmento/";
+            },},{id: "projects-spring-boot-java-projects-a-collection-of-applications-and-integrations",
+          title: 'Spring Boot Java Projects - a collection of applications and integrations',
+          description: "with background image",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/spring-projects/";
+            },},{id: "projects-what-39-s-next",
+          title: 'What&amp;#39;s next',
+          description: "My next project - what creative inspiration driving curiousities",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/whats-next/";
             },},{
         id: 'social-email',
         title: 'email',
