@@ -1,9 +1,9 @@
 ---
 layout: page
-title: project 9
-description: another project with an image 🎉
-img: assets/img/6.jpg
-importance: 4
+title: What's next
+description: My next project - what creative inspiration driving curiousities
+img:
+importance: 3
 category: fun
 ---
 

@@ -4,13 +4,17 @@ title: Fortune ai
 description: Fortune ai is a Java spring boot api connected to chatgpt with a 'category' prompt. It returns a possitive message based on the topic
 img: assets/img/12.jpg
 importance: 1
-category: work
+category: java
 related_publications: true
 ---
 
 Fortune-ai is a preliminary test of Java Spring Boot API development. The idea to represent a chatbot using chatgpt to provide prompting. It is simple to use and implement. 
 A test model is associated with pintmento.com as the front end display and integration with an AWS EC2 instance and an RDS database storage system.
+ Use to kickstart an app or tutorial.
 
+Visit the repo and kick start your project! 
+
+- [Happy2be Repository](https://github.com/cryshansen/happy2be)
 Proper Image layouts to come soon! Check back to find its packaged nicely visually. 
 
 <div class="row">

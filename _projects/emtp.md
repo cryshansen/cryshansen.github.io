@@ -2,10 +2,10 @@
 layout: page
 title: EMTP Drupal Projects
 description: Drupal compontents for Drupal websites and custom modules that span the versions from 8.7 through to 11 modules / theme components and integrations.Below are the projects and notable contributions.
-img: assets/img/12.jpg
+img: assets/img/9.jpg
 permalink: /projects/drupal-projects/emtp/
 importance: 1
-category: work
+category: drupal
 related_publications: true
 ---
 

@@ -1,9 +1,9 @@
 ---
 layout: page
-title: project 4
-description: another without an image
+title: Curiosity 
+description: Some fun creative insiprations to evolve coming soon
 img:
-importance: 3
+importance: 4
 category: fun
 ---
 

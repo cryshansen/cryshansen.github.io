@@ -2,15 +2,33 @@
 layout: page
 title: Bookit
 description: A simple booking system API with Java Spring Boot AWS cloud environment EC2 and RDS 
-img: assets/img/1.jpg
+img: assets/img/12.jpg
 importance: 3
-category: fun
+category: java
 ---
+
+
+### Java Spring Boot Collection
+
+- [ Bookit ](bookit)
+- [fortune-ai](./artog-co)
+- [Site C – Pinmento.com](./pinmento)
+
+
+
 
 
 This project is the inspiration for future projects intended to grow in the booking ecosystem. This particular project focuses only on backend and a vanilla style html / javascript page to make building quicker and faster as version 1 evolves into React and Angular integrated packages.
 
+Visit the repo and kick start your project! 
+
+- [Bookit Repository](https://github.com/cryshansen/bookit)
+
+
 Images are for layout purposes and soon to come!
+
+
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}

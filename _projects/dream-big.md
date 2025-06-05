@@ -1,8 +1,8 @@
 ---
 layout: page
-title: project 6
-description: a project with no image
-img:
+title: Dream Big
+description: Dream big fly high 🎉
+img: assets/img/6.jpg
 importance: 4
 category: fun
 ---

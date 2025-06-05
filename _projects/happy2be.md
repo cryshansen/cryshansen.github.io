@@ -2,13 +2,18 @@
 layout: page
 title: Happy2be
 description: Furthering my exploration in Java Spring Boot APIs and cloud technologies
-img: assets/img/3.jpg
+img: assets/img/12.jpg
 importance: 2
-category: work
+category: java
 giscus_comments: true
 ---
 
-Furthering my exploration in Java Spring Boot APIs and cloud technologies, and using the foundation of fortune-ai, the desire to understand language models with human interface has be exploring the value ChatGPT can bring. 
+Furthering my exploration in Java Spring Boot APIs and cloud technologies, and using the foundation of fortune-ai, the desire to understand language models with human interface has be exploring the value ChatGPT can bring. Use to kickstart an app or tutorial.
+
+Visit the repo and kick start your project! 
+
+- [Happy2be Repository](https://github.com/cryshansen/happy2be)
+
 
 Clean and interesting images of the project will be coming soon. 
 
