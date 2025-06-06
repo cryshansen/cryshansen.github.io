@@ -3,6 +3,7 @@ layout: page
 title: Bookit
 description: A simple booking system API with Java Spring Boot AWS cloud environment EC2 and RDS 
 img: assets/img/12.jpg
+permalink: /projects/java-projects/bookit/
 importance: 3
 category: java
 ---
@@ -10,12 +11,12 @@ category: java
 
 ### Java Spring Boot Collection
 
-- [ Bookit ](bookit)
-- [fortune-ai](./artog-co)
-- [Site C – Pinmento.com](./pinmento)
-
-
-
+- [ Bookit ] bookit
+- [fortune-ai](/projects/java-projects/fortune-ai)
+- [happy2be](/projects/java-projects/happy2be)
+- [calendar](/projects/java-projects/calendar/)
+- [gallery-loader](/projects/java-projects/gallery-loader)
+- [lazy-image-loader](/projects/java-projects/lazy-image-loader/)
 
 
 This project is the inspiration for future projects intended to grow in the booking ecosystem. This particular project focuses only on backend and a vanilla style html / javascript page to make building quicker and faster as version 1 evolves into React and Angular integrated packages.
@@ -31,13 +32,13 @@ Images are for layout purposes and soon to come!
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/java/michael-c-A3K6lKG4yKY-unsplash.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/java/mockup-free-37cb_vU9cg4-unsplash.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/java/mockup-free-LHqGt6byYng-unsplash.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -45,7 +46,7 @@ Images are for layout purposes and soon to come!
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/java/mockup-free-M8Pptu0rVqk-unsplash.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -58,10 +59,10 @@ You describe how you toiled, sweated, _bled_ for your project, and then... you r
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/java/mockup-free-xUoGSlh0LhU-unsplash.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/java/mockup-free-zQGl_3j6QOM-unsplash.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">

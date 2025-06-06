@@ -10,11 +10,24 @@ related_publications: true
 
 ### Java Spring Boot Collection
 
-- [Bookit](./bookit)
-- [fortune-ai](./fortune-ai)
-- [happy2be](./happy2be)
+- [Bookit](/projects/java-projects/bookit)
+- [fortune-ai](/projects/java-projects/fortune-ai)
+- [happy2be](/projects/java-projects/happy2be)
+- [calendar](/projects/java-projects/calendar/)
+- [gallery-loader](/projects/java-projects/gallery-loader)
+- [lazy-image-loader](/projects/java-projects/lazy-image-loader/)
 
-This section compiles a collection of projects to navigate through connecting the code body to a working live copy of the applications and systems.
+My Java applications reflect enterprise reliability and security. These apps support business processes through robust backend logic and a clean front-end integration layer.
+
+Key Projects:
+
+Document Workflow Engine: A backend system that handles secure file processing, document categorization, and archival routines.
+
+API Integration Tools: Java-based middleware that connects third-party services with internal dashboards and databases.
+
+Admin Console UIs: Secure Java-based UIs for managing content and file permissions across distributed systems.
+
+What sets me apart: Scalable architecture, consistent coding standards, and thoughtful integration with legacy systems and firewalls.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">

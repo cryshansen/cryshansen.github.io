@@ -3,10 +3,21 @@ layout: page
 title: Happy2be
 description: Furthering my exploration in Java Spring Boot APIs and cloud technologies
 img: assets/img/12.jpg
+permalink: /projects/java-projects/happy2be/
 importance: 3
 category: java
-giscus_comments: true
+giscus_comments: false
 ---
+
+
+### Java Spring Boot Collection
+
+- [Bookit](/projects/java-projects/bookit)
+- [fortune-ai](/projects/java-projects/fortune-ai)
+- [happy2be] happy2be
+- [calendar](/projects/java-projects/calendar/)
+- [gallery-loader](/projects/java-projects/gallery-loader)
+- [lazy-image-loader](/projects/java-projects/lazy-image-loader/)
 
 Furthering my exploration in Java Spring Boot APIs and cloud technologies, and using the foundation of fortune-ai, the desire to understand language models with human interface has be exploring the value ChatGPT can bring. Use to kickstart an app or tutorial.
 
@@ -20,13 +31,13 @@ Clean and interesting images of the project will be coming soon.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/java/Happy2Be-postman.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/daniel-norris-bZzHEs2eSkg-unsplash.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/jon-moore-CDbB4EJ4i_A-unsplash.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -34,7 +45,7 @@ Clean and interesting images of the project will be coming soon.
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/jon-tyson-9_XEfsHsHJ0-unsplash.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -47,10 +58,10 @@ You describe how you toiled, sweated, _bled_ for your project, and then... you r
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/java/kedibone-isaac-makhumisane-4vNhJX7f-DM-unsplash.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/java/kelly-sikkema-HHXodvj4ipk-unsplash.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
