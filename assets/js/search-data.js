@@ -11,7 +11,7 @@ ninja.data = [{
     },
   },{id: "nav-projects",
           title: "projects",
-          description: "A growing collection of different coding stacks of projects.",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
@@ -57,26 +57,21 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/3_project/";
-            },},{id: "projects-project-8",
-          title: 'project 8',
-          description: "an other project with a background image and giscus comments",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/8_project/";
             },},{id: "projects-artog-co-drupal-project",
           title: 'Artog.co Drupal Project',
-          description: "Drupal compontents for Drupal websites and custom modules that span the versions from 8.7 through to 11 modules / theme components and integrations.Below are the projects and notable contributions.",
+          description: "Drupal 11 websites and custom  modules / theme components and integrations.Below are notable contributions.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/artog-co/";
+              window.location.href = "/projects/drupal-projects/artog-co/";
             },},{id: "projects-bookit",
           title: 'Bookit',
           description: "A simple booking system API with Java Spring Boot AWS cloud environment EC2 and RDS",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/bookit/";
+              window.location.href = "/projects/java-projects/bookit/";
+            },},{id: "projects-calendar",
+          title: 'Calendar',
+          description: "Exploring Java and Angular.js creating a full calendar with angular methods and delegations",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/java-projects/calendar/";
             },},{id: "projects-curiosity",
           title: 'Curiosity',
           description: "Some fun creative insiprations to evolve coming soon",
@@ -92,8 +87,8 @@ ninja.data = [{
           description: "Drupal compontents for Drupal websites and custom modules that span the versions from 8.7 through to 11 modules / theme components and integrations.Below are the projects and notable contributions.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/drupal-projects/";
-            },},{id: "projects-emtp-drupal-projects",
-          title: 'EMTP Drupal Projects',
+            },},{id: "projects-emtp-com-drupal-project",
+          title: 'EMTP.com Drupal Project',
           description: "Drupal compontents for Drupal websites and custom modules that span the versions from 8.7 through to 11 modules / theme components and integrations.Below are the projects and notable contributions.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/drupal-projects/emtp/";
@@ -101,17 +96,47 @@ ninja.data = [{
           title: 'Fortune ai',
           description: "Fortune ai is a Java spring boot api connected to chatgpt with a &#39;category&#39; prompt. It returns a possitive message based on the topic",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/fortune-ai/";
+              window.location.href = "/projects/java-projects/fortune-ai/";
+            },},{id: "projects-gallery-loader",
+          title: 'Gallery Loader',
+          description: "Exploring Java Spring Factory and Angular.js sends a json response with file image structure parsing for masonry layout front end using angular methods and delegates",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/java-projects/gallery-loader";
             },},{id: "projects-happy2be",
           title: 'Happy2be',
           description: "Furthering my exploration in Java Spring Boot APIs and cloud technologies",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/happy2be/";
+              window.location.href = "/projects/java-projects/happy2be/";
+            },},{id: "projects-python-happyfaces",
+          title: 'Python HappyFaces',
+          description: "A local run/flask integration of the distilbert pretrained positive negative classification.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/python-projects/happyfaces/";
+            },},{id: "projects-lazy-image-loader",
+          title: 'Lazy Image Loader',
+          description: "Exploring Java Spring Factory and Angular 2+ sends a json response with file image structure parsing for masonry layout front end using angular methods and delegates",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/java-projects/lazy-image-loader/";
+            },},{id: "projects-python-license-spring-api",
+          title: 'Python License Spring API',
+          description: "A compilation of data information endpoint connections to gather and parsing data related to EMTP.com Licenses.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/python-projects/license-spring-api/";
             },},{id: "projects-pinmento-com-drupal-project",
           title: 'Pinmento.com Drupal Project',
           description: "Drupal custom website modules that span the versions from 8.7 through to 11 modules / theme components and integrations.Below are the projects and notable contributions.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/pinmento/";
+              window.location.href = "/projects/drupal-projects/pinmento/";
+            },},{id: "projects-python-projects-a-collection-of-applications-and-integrations",
+          title: 'Python Projects - a collection of applications and integrations',
+          description: "A variety of python explorations and implementations ranging from screen scrapers to full flask app.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/python-projects/";
+            },},{id: "projects-python-web-page-scraper",
+          title: 'Python Web Page Scraper',
+          description: "A compilation of page scrapers and parsing data for databse injection",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/python-projects/scraper-master/";
             },},{id: "projects-spring-boot-java-projects-a-collection-of-applications-and-integrations",
           title: 'Spring Boot Java Projects - a collection of applications and integrations',
           description: "with background image",
