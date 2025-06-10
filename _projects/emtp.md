@@ -55,9 +55,9 @@ The emtp.com website I was the sole developer and manager of the web integration
 8. Implement views to display the new content types working within the theme hooks and views data to display subsets of data or full view pages. Twig templates were customized to display the pages as originally designed. Paging and view more configurations as required.
 9. Create a module to handle webform remote_post_handler for the two forms that were originally designed and configured. This handler required configuration fields and used in the theme hooks to push through guzzle http requests. json configuration mapped the webform fields as per the below code:
 
+#### Customize the Webform remote_post_handler
 
-The code is simple.
-Customizing the Webform module to send data through to an api create a form then navigate to the handlers section choose "Remote Post" to create a new handler with uri / method and json payload tokens : 
+The code is simple. The Webform module to send data through to an api create a form then navigate to the handlers section choose "Remote Post" to create a new handler with uri / method and json payload tokens : 
 
 {% raw %}
 ```json
