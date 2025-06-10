@@ -59,7 +59,7 @@ ninja.data = [{
               window.location.href = "/books/the_godfather/";
             },},{id: "projects-artog-co-drupal-project",
           title: 'Artog.co Drupal Project',
-          description: "Drupal 11 websites and custom  modules / theme components and integrations.Below are notable contributions.",
+          description: "Drupal 11 websites and custom  modules / theme components and integrations. Below are notable contributions.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/drupal-projects/artog-co/";
             },},{id: "projects-bookit",
@@ -92,6 +92,11 @@ ninja.data = [{
           description: "Drupal compontents for Drupal websites and custom modules that span the versions from 8.7 through to 11 modules / theme components and integrations.Below are the projects and notable contributions.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/drupal-projects/emtp/";
+            },},{id: "projects-evolving-web-questionaire",
+          title: 'Evolving Web Questionaire',
+          description: "A Page that summarizes my website work and custom code Drupal compontents for Drupal websites and custom modules that span the versions from 8.7 through to 11 modules / theme components and integrations. Below are the answers to the questions requested.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/drupal-projects/evolve-web/";
             },},{id: "projects-fortune-ai",
           title: 'Fortune ai',
           description: "Fortune ai is a Java spring boot api connected to chatgpt with a &#39;category&#39; prompt. It returns a possitive message based on the topic",
