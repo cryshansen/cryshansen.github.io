@@ -6,7 +6,7 @@ img: assets/img/9.jpg
 permalink: /projects/drupal-projects/pinmento/
 importance: 4
 category: drupal
-related_publications: true
+related_publications: false
 ---
 
 ### Drupal Websites Collection
@@ -24,9 +24,10 @@ related_publications: true
 
 These custom modules are integrations of Google Maps settings and interactions:
 
-- [Custom Vector Map Module](https://github.com/cryshansen/custom_vectormap)
+- [Custom Vector Map Module](https://github.com/cryshansen/custom_vector)
 - [Map Pins Module](https://github.com/cryshansen/map_pins)
 - [Pin Drop Locations ](https://github.com/cryshansen/pin_drop_location)
+- [Chatbot] tbd: named Orbie AI
 
 
 ## Project Image Gallery

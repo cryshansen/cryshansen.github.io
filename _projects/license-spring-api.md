@@ -13,7 +13,7 @@ giscus_comments: true
 ### Python Collection
 
 - [Site A – Happy Faces ](/projects/python-projects/happyfaces/)
-- [Site B – scraper](/projects/python-projects/scraper-master/)
+- [Site B – Scraper](/projects/python-projects/scraper-master/)
 - [Site C – License Spring API] License Spring API
 
 

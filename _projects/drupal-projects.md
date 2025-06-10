@@ -8,7 +8,10 @@ category: drupal
 related_publications: true
 ---
 
-I specialize in crafting powerful content-driven sites with Drupal. From theme and module development to complex migrations and views customization, my Drupal work is backed by a deep understanding of structured content and accessibility best practices.
+### Introduction
+I specialize in crafting powerful content-driven sites with Drupal. From  theme and module development to complex migrations and views customization, my Drupal work is backed by a deep understanding of structured content and accessibility best practices.
+
+
 
 Key Projects:
 
@@ -33,9 +36,10 @@ What sets me apart: Tailored UX with reusable components, clean preprocess funct
 
 These custom modules are reused across multiple projects:
 
+- [Email Subscriber Module](https://github.com/cryshansen/email_subscriber)
 - [Star Rating Module](https://github.com/cryshansen/drupal_ratings)
 - [Download Module](https://github.com/cryshansen/custom_download)
-- [Vector Map Module](https://github.com/cryshansen/custom_vectormap)
+- [Vector Map Module](https://github.com/cryshansen/custom_vector)
 - [Conference Agenda Module](https://github.com/cryshansen/conference_agenda)
 - [Conference Leads Module](https://github.com/cryshansen/conference_leads)
 - [Map Pins Module](https://github.com/cryshansen/map_pins)
