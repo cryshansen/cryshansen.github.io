@@ -150,6 +150,13 @@ Below I have included the websites i have been actively building in 2025 using d
 - [Site B – Artog.co](/projects/drupal-projects/artog-co/)
 - [Site C – Pinmento.com](/projects/drupal-projects/pinmento/)
 
+General Websites: 
+
+Wordpress:
+- [ crystalhansenartographic.ca ](https://crystalhansenartographic.ca)
+
+Vanilla PHP/API booking system:
+- [ zackly-rite ](https://zackly-rite.ca)
 
 Please note these linked project pages are still under some development and they will be coming soon with more itemized details to their modules and functionalities.
 
