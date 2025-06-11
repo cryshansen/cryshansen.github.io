@@ -69,7 +69,7 @@ This site is a one page website that encompasess a booking interface for the boo
         {% include figure.liquid path="assets/img/zackly-rite/booking-details.png" title="Booking Details" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/artog/zackly-rite/booking-details-alert.png" title="Booking Details captured from form" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/zackly-rite/booking-details-alert.png" title="Booking Details captured from form" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -84,17 +84,6 @@ This site is a one page website that encompasess a booking interface for the boo
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/zackly-rite/email-confirmation-view.png" title="Email Client Confirmation" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/artog/tickets.png" title="Ticketing Section" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/artog/orders_invoices.png" title="Orders and Invoices" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/artog/activated_license.png" title="Activated Licenses" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 

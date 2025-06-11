@@ -80,8 +80,6 @@ Most interesting development is with the polling of questions pertaining to art,
 <div class="caption">
   The polling and process pages are very interesting tools to use with any site. The polling gives the site a way to identify user interest and engagements. The limitation is only one question per poll. Ideally a paging through some questions say 5 or so would be good perhaps a link to a second poll item might be a way to work with this feature. 
 </div>
-
-
 <div class="row">
     <div class="col-sm-8 mt-3 mt-md-0"> 
         {% include figure.liquid loading="eager" path="assets/img/artographic/photographic-strategy.png" title="Photography Trending Ideas" class="img-fluid rounded z-depth-1" %}
