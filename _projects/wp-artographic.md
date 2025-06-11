@@ -16,7 +16,7 @@ related_publications: false
 - [Site B – crystalhansenartographic](https://crystalhansenartographic.com)
 
 ##### Wordpress site
-- [Site C – crystalhansenartographic.ca] wp-artographic
+- [Site C – crystalhansenartographic.ca] artographic wordpress
 
 ---
 
@@ -32,11 +32,11 @@ Unique to crystalhansenartographic.ca
 
 Some of the Plugins: 
 
-  -- Poll 2.4.9		
-  -- Poll Maker 5.8.5
-  -- WPForms Lite 1.9.6	
-  -- WPZOOM Forms 1.2.10
-  -- WPZOOM Instagram Widget  
+-- Poll 2.4.9		
+-- Poll Maker 5.8.5
+-- WPForms Lite 1.9.6	
+-- WPZOOM Forms 1.2.10
+-- WPZOOM Instagram Widget  
 
 
 
@@ -77,14 +77,6 @@ Most interesting development is with the polling of questions pertaining to art,
    Process content block explores the wordpress framework with interesting content related to agencies and photographers. The Right image is a visual representation of the polling integrations. 
 </div>
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/artographic/polling.png" title="Content layout of Pages" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-8 mt-3 mt-md-0"> 
-        {% include figure.liquid path="assets/img/artographic/processes-content.png" title="Questionaire example" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
 <div class="caption">
   The polling and process pages are very interesting tools to use with any site. The polling gives the site a way to identify user interest and engagements. The limitation is only one question per poll. Ideally a paging through some questions say 5 or so would be good perhaps a link to a second poll item might be a way to work with this feature. 
 </div>
@@ -95,7 +87,7 @@ Most interesting development is with the polling of questions pertaining to art,
         {% include figure.liquid loading="eager" path="assets/img/artographic/photographic-strategy.png" title="Photography Trending Ideas" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/artog/artographic/creative-strategy.png" title="Creative Strategy" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/artographic/creative-strategy.png" title="Creative Strategy" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
