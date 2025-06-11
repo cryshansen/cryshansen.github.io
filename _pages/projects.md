@@ -12,6 +12,10 @@ Welcome to my Technology Portfolio — a curated overview of the solutions I've 
 
 Enterprise-grade web solutions in <a href="#drupal"> Drupal </a>.
 
+Responsive, mobile-first <a href="#work">vanilla Bootstrap</a> website.
+
+Custom-built <a href="#work">WordPress</a> site with theme and plugin integration.
+
 Scalable and reliable <a href="#java">Java</a> applications.
 
 Agile <a href="#python">Python</a> tools and intelligent automation.
