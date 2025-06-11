@@ -152,6 +152,16 @@ ninja.data = [{
           description: "My next project - what creative inspiration driving curiousities",
           section: "Projects",handler: () => {
               window.location.href = "/projects/whats-next/";
+            },},{id: "projects-artographic-wordpress-project",
+          title: 'Artographic Wordpress Project',
+          description: "Wordpress driven website of crystalhansenartographic.ca incorporating polling and brevo connections.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/wp-artographic/";
+            },},{id: "projects-zackly-rite-project",
+          title: 'Zackly-rite Project',
+          description: "Vanilla website build with Bootstrap and PHP api for booking appointments",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/zackly-rite/";
             },},{
         id: 'social-email',
         title: 'email',
