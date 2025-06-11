@@ -153,10 +153,11 @@ Below I have included the websites i have been actively building in 2025 using d
 General Websites: 
 
 Wordpress:
-- [ crystalhansenartographic.ca ](https://crystalhansenartographic.ca)
+- [ crystalhansenartographic.ca ](/projects/wp-artographic/)
 
 Vanilla PHP/API booking system:
-- [ zackly-rite ](https://zackly-rite.ca)
+- [ zackly-rite ](/projects/zackly-rite/)
+- [crystalhansenartographic.com](https://crystalhansenartographic.com/)
 
 Please note these linked project pages are still under some development and they will be coming soon with more itemized details to their modules and functionalities.
 
