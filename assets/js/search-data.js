@@ -72,6 +72,16 @@ ninja.data = [{
           description: "Exploring Java and Angular.js creating a full calendar with angular methods and delegations",
           section: "Projects",handler: () => {
               window.location.href = "/projects/java-projects/calendar/";
+            },},{id: "projects-crystal-hansen-artographic-project",
+          title: 'Crystal Hansen Artographic Project',
+          description: "An exploration in React Frameworks v2 to learn practically with an html site and includes.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/chartcom/";
+            },},{id: "projects-crystal-hansen-artographic-project",
+          title: 'Crystal Hansen Artographic Project',
+          description: "An exploration in React Frameworks v1 to learn practically with an html site and includes.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/crystalhansenartographic/";
             },},{id: "projects-curiosity",
           title: 'Curiosity',
           description: "Some fun creative insiprations to evolve coming soon",
@@ -157,6 +167,11 @@ ninja.data = [{
           description: "Wordpress driven website of crystalhansenartographic.ca incorporating polling and brevo connections.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/wp-artographic/";
+            },},{id: "projects-zackly-rite-appointment-booking-app-project",
+          title: 'Zackly-Rite Appointment Booking App Project',
+          description: "An exploration in React Frameworks to learn practically with refactoring a vanilla site into a modern frameworks.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/chartcom/";
             },},{id: "projects-zackly-rite-project",
           title: 'Zackly-rite Project',
           description: "Vanilla website build with Bootstrap and PHP api for booking appointments",
