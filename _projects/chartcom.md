@@ -184,5 +184,4 @@ npm install --save-dev @types/react-helmet
 
 ---
 
-Let me know if you'd like this tutorial split per directory with README.md files inside each subfolder.
 
