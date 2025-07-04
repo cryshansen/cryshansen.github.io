@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Zackly-Rite Appointment Booking App Project
+title: Zackly-Rite Booking App Project
 description: An exploration in React Frameworks to learn practically with refactoring a vanilla site into a modern frameworks.
 img: assets/img/9.jpg
-permalink: /projects/chartcom/
+permalink: /projects/zackly-rite-spa/
 importance: 3
 category: work
 related_publications: false
