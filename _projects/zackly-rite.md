@@ -21,7 +21,8 @@ Additional tools include PHPMailer for transactional email handling and google-a
 ### General Websites Collection
 
 - [Site A – zackly-rite ]zackly-rite
-- [Site B – crystalhansenartographic](https://crystalhansenartographic.com)
+- [Site B – crystalhansenartographic]()
+- [Site D - chartcom](https://crystalhansenartographic.com)
 
 ##### Wordpress site
 - [Site C – crystalhansenartographic.ca](/projects/wp-artographic/)
@@ -34,7 +35,7 @@ Additional tools include PHPMailer for transactional email handling and google-a
 <br>
 Unique to Zackly-rite 
 
-    -- Use of a booking system coupled with a structured php api to connect bookit java implementation
+    -- Use of a booking system coupled with a structured php api to connect `bookit` java implementation found under the java projects
     -- Uses get methods for simplicity of booking coupled with front end and back end tokens to track the bookings so that there are no duplication during a session. 
     -- Full-calendar appointment view for administration of the site. 
     -- Integration with google calendar to facilitate a second implementation option for administration. TBD.
@@ -59,7 +60,7 @@ They represent some areas that are exclusive the the Artog.co ecosystem. The lis
     </div>
 </div>
 <div class="caption">
-    The above set of images are front end displays relative to the code behind for the links to github modules. Some portions rely on static Block content, and RBA like the dashboard for instance.
+    The above set of images are front end displays relative to the code behind for the links to github repository.
   On the left we have the header and logo of the site, Middle image is the calendar display with first days available via greyout, todays date hightligted, Right image we have the day availability screen 
 </div>
 
