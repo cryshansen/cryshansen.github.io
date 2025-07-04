@@ -167,11 +167,11 @@ ninja.data = [{
           description: "Wordpress driven website of crystalhansenartographic.ca incorporating polling and brevo connections.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/wp-artographic/";
-            },},{id: "projects-zackly-rite-appointment-booking-app-project",
-          title: 'Zackly-Rite Appointment Booking App Project',
+            },},{id: "projects-zackly-rite-booking-app-project",
+          title: 'Zackly-Rite Booking App Project',
           description: "An exploration in React Frameworks to learn practically with refactoring a vanilla site into a modern frameworks.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/chartcom/";
+              window.location.href = "/projects/zackly-rite-spa/";
             },},{id: "projects-zackly-rite-project",
           title: 'Zackly-rite Project',
           description: "Vanilla website build with Bootstrap and PHP api for booking appointments",
