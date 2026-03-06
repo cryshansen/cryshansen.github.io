@@ -37,7 +37,29 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-react-login-series-reusing-the-feature-in-another-app-part-7",
+        },{id: "post-the-gpu-less-ai-server-running-heavy-py",
+        
+          title: "The Gpu Less Ai Server Running Heavy Py",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/the-gpu-less-ai-server-running-heavy-py/";
+          
+        },
+      },{id: "post-building-a-dropin-chatbot-widget-for-any-spa-app",
+        
+          title: "Building a Dropin Chatbot Widget for any SPA App",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/react-chatbot-widget-feature/";
+          
+        },
+      },{id: "post-react-login-series-reusing-the-feature-in-another-app-part-7",
         
           title: "React Login Series - Reusing the Feature in Another App | Part 7...",
         
