@@ -9,11 +9,13 @@ AI models are memory-hungry. If you are using a 1GB or 2GB RAM instance, stop no
 The Secret Weapon: Swap Space
 Even with 16GB, building Python AI containers can spike your memory and kill the process. We create a "safety net" using a Swap file.
 
+```bash
 Bash
 sudo fallocate -l 4G /swapfile
 sudo chmod 600 /swapfile
 sudo mkswap /swapfile
 sudo swapon /swapfile
+```
 2. The Docker Strategy: "Surgical" Python Builds
 Most people fail because their Python Docker image ends up being 5GB+. We need to be surgical. Instead of one massive pip install -r requirements.txt, we break it down to manage memory and disk pressure.
 
