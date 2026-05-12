@@ -1,4 +1,23 @@
-The GPU-less AI Server: Running Heavy Python Models and Java Apps on a Budget
+---
+layout: post
+title: "The GPU-less AI Server: Running Heavy Python Models and Java Apps on a Budget"
+date: 2026-02-10
+description: Running a GPU-less Spring Boot app with python models.
+tags: [pyton, integration, gpu-less, ai-server]
+categories: [AI, GPU-less]
+giscus_comments: false
+related_posts: true
+related_publications: false
+featured: false
+mermaid:
+  enabled: true
+  zoomable: true
+code_diff: true
+---
+
+
+## The GPU-less AI Server: Running Heavy Python Models and Java Apps on a Budget
+
 So, you want to run a modern tech stack—a Java Spring Boot backend, a MySQL database, and a Python AI service (like Hugging Face or PyTorch)—all on a single cloud VM. You don't have a $500/month GPU budget, and your Docker builds keep crashing with "No Space Left on Device."
 
 I just spent the day in the trenches fixing this. Here is the definitive guide to surviving the build.

@@ -296,7 +296,7 @@ Beyond the per-contact state checks, apply these sequence-level rules:
 
 **Unsubscribe handling:** Every marketing email must include an unsubscribe link. When a contact clicks it, set `marketing_email_opt_in = false` on their record. The `shouldExit` check above will catch this on the next step.
 
-**Global suppression check:** Always cross-reference the suppression list (from [Part 3]({% post_url 2026-05-12-ses-bounce-complaint-handling %})) before sending any nurture step. An address that hard-bounced should never receive another email, regardless of sequence state.
+**Global suppression check:** Always cross-reference the suppression list (from [Part 3]({% post_url 2026-04-15-ses-bounce-complaint-handling %})) before sending any nurture step. An address that hard-bounced should never receive another email, regardless of sequence state.
 
 **Frequency cap:** Avoid sending multiple emails on the same day from different sequences. A contact might be enrolled in a post-signup sequence and also receive an appointment reminder on the same day — implement a daily cap:
 

@@ -464,6 +464,7 @@ export default function HeaderTopLevel({ darkMode, setDarkMode, isLoggedIn, logo
 }
 ```
 
+{% raw %}
 ```jsx
 AccountDropdown.jsx;
 import { useState, useRef, useEffect } from "react";
@@ -556,6 +557,7 @@ export default function AccountDropdown({ darkMode, isLoggedIn, logout }) {
   );
 }
 ```
+{% endraw %}
 
 ---
 

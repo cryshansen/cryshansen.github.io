@@ -1,12 +1,14 @@
 ---
 layout: post
-title: Building Sovereign Social Automation with Meta's System Users
-date: 2026-04-14 10:00:00-0400
-description: A technical guide on bypassing session flakes using Meta System Users for multi-tenant SaaS.
-tags: saas automation api meta
-categories: engineering
+title: "Building Sovereign Social Automation with Meta's System Users"
+date: 2026-04-15
+description: "A technical guide on bypassing session flakes using Meta System Users for multi-tenant SaaS."
+tags: [saas, automation, api, meta]
+categories: [engineering]
 featured: true
 ---
+
+## Building Sovereign Social Automation with Meta's System Users
 
 After fighting with Meta's disappearing browser sessions and flaky personal account tokens, I successfully migrated the **Fluxo Social Engine** to a "Sovereign Infrastructure" model. 
 
@@ -57,7 +59,7 @@ This creates a seamless "Sovereign" bridge where the user owns their data, and F
 
 
 ### 3. Tips for al-folio Customization
-* **Images:** If you have a diagram of your infrastructure, place it in `assets/img/posts/` and use the `{% include figure.html ... %}` tag as shown above.
+* **Images:** If you have a diagram of your infrastructure, place it in `assets/img/posts/` and use the `{% raw %}{% include figure.html ... %}{% endraw %}` tag as shown above.
 * **Math/Equations:** If you want to get fancy with the lead-scoring logic, al-folio supports MathJax. You can use $ $ for inline math.
 * **Social Preview:** Since this template is built for researchers/developers, ensure your `description` in the Front Matter is punchy; it will show up on your "Projects" or "Blog" index page.
 

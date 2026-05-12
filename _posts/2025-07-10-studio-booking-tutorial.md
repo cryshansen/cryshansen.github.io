@@ -54,11 +54,13 @@ Have you ever wanted to build a front end of a fully functional booking applicat
 
 The user browses available studios with name, description, accessories, and pricing. Clicking “Book Now” sends studio data to the calendar component.
 
+{% raw %}
 ```ts
   this.router.navigate(['/calendar', id], {{
 
 }});
 ```
+{% endraw %}
 
 ---
 
@@ -129,6 +131,7 @@ Deployed to `/public_html/studio-booker/`
 .htaccess routes all paths to index.html
 Always show details
 
+{% raw %}
 ```apache
 
 <IfModule mod_rewrite.c>
@@ -139,6 +142,7 @@ Always show details
   RewriteRule . /index.html [L]
 </IfModule>
 ```
+{% endraw %}
 
 ---
 

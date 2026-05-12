@@ -73,6 +73,7 @@ The host app only passes configuration — everything else lives inside the feat
 ### Drop-In Usage
 
 Here’s what using Orbie looks like inside a host app:
+{% raw %}
 ```tsx
 <OrbieWidget
   config={{
@@ -86,6 +87,7 @@ Here’s what using Orbie looks like inside a host app:
   userId="123"
 />
 ```
+{% endraw %}
 
 That’s it.
 
