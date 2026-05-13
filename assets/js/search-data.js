@@ -158,22 +158,22 @@ ninja.data = [{
             window.location.href = "/blog/2026/ses-multi-tenant-email-service/";
           
         },
-      },{id: "post-docker-cheat-sheet-for-the-mindless",
+      },{id: "post-docker-cheatsheet-for-the-mindless",
         
-          title: "Docker Cheat Sheet For The Mindless",
+          title: "Docker Cheatsheet for the Mindless",
         
-        description: "",
+        description: "Docker cheat sheet for quick reference of common tasks.",
         section: "Posts",
         handler: () => {
           
             window.location.href = "/blog/2026/docker-cheat-sheet-for-the-mindless/";
           
         },
-      },{id: "post-designing-multi-tenant-saas-where-industries-feel-brand",
+      },{id: "post-designing-a-multi-tenant-saas-where-each-industry-feels-like-its-own-product",
         
-          title: "Designing Multi Tenant Saas Where Industries Feel Brand",
+          title: "Designing a Multi-Tenant SaaS Where Each Industry Feels Like Its Own Product",
         
-        description: "",
+        description: "Building Platforms that work.",
         section: "Posts",
         handler: () => {
           
