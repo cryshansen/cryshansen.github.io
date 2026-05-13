@@ -221,12 +221,3 @@ You can grab the finalized [version](https://github.com/cryshansen/login-feature
 
 Alternatively, if you just want an app prebuild with login incorporated, you can download our test app integration at [base-login-app](https:/github.com/cryshansen/base-login-app)
 
-## Optional Post: What I’d Do Differently Next Time
-
-Shows senior thinking:
-
-Tradeoffs
-
-What broke
-
-What scaled well
