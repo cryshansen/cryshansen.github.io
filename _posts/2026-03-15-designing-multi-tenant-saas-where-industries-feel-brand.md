@@ -10,7 +10,7 @@ related_posts: false
 related_publications: false
 featured: false
 mermaid:
-  enabled: trfalseue
+  enabled: false
   zoomable: true
 code_diff: true
 ---
