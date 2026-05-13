@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Docker Cheatsheet for the Mindless 
+title: Docker Cheatsheet for the Mindless
 date: 2026-03-19
 description: Docker cheat sheet for quick reference of common tasks.
-tags: [docker, restart, compose, ]
-categories: [docker ]
+tags: [docker, restart, compose]
+categories: [docker]
 giscus_comments: false
 related_posts: false
 related_publications: false
@@ -14,7 +14,6 @@ mermaid:
   zoomable: true
 code_diff: true
 ---
-
 
 # Docker Cheatsheet for the mindless chore
 

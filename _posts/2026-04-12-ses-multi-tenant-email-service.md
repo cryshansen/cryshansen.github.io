@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Multi-Tenant FROM Address Resolution & Spring EmailService"
-date: 2026-04-12 
+date: 2026-04-12
 description: "How to build a Spring @Service that resolves the correct sender address per tenant and renders per-tenant email templates from a database or file fallback."
-tags: [ aws,ses, spring-boot, java, multi-tenant, email ]
+tags: [aws, ses, spring-boot, java, multi-tenant, email]
 categories: [engineering, backend]
 author: your_name
 og_image: /assets/img/blog/ses-multitenant.png

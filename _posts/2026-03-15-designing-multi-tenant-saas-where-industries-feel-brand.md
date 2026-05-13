@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  Designing a Multi-Tenant SaaS Where Each Industry Feels Like Its Own Product
+title: Designing a Multi-Tenant SaaS Where Each Industry Feels Like Its Own Product
 date: 2026-03-15
 description: Building Platforms that work.
-tags: [multi-tenant, platforms, architecture, branding, spring-boot, aws, java ]
-categories: [ SaaS-Platforms ]
+tags: [multi-tenant, platforms, architecture, branding, spring-boot, aws, java]
+categories: [SaaS-Platforms]
 giscus_comments: false
 related_posts: false
 related_publications: false
@@ -14,6 +14,7 @@ mermaid:
   zoomable: true
 code_diff: true
 ---
+
 # Designing a Multi-Tenant SaaS Where Each Industry Feels Like Its Own Product
 
 When building SaaS platforms, founders often face a dilemma:
