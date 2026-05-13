@@ -2,9 +2,9 @@
 layout: post
 title: Building a Dropin Chatbot Widget for any SPA App
 date: 2026-02-03
-description: 
+description:
 tags: [react, chatbot, UI, integrations, API]
-categories: [react-posts ]
+categories: [react-posts]
 giscus_comments: false
 related_posts: true
 related_publications: false
@@ -26,9 +26,9 @@ Most chatbots are tightly coupled to:
 - a specific auth system
 - or a specific backend contract
 
-I wanted the opposite. I need a feature that can be reused and not require any real code change besides maybe some slight UI color matching within the drop.  So I built Orbie AI — a fully self-contained, drop-in chatbot widget for React or other SPA's that can plug into any GET-based chatbot API, with zero assumptions about the host application.
+I wanted the opposite. I need a feature that can be reused and not require any real code change besides maybe some slight UI color matching within the drop. So I built Orbie AI — a fully self-contained, drop-in chatbot widget for React or other SPA's that can plug into any GET-based chatbot API, with zero assumptions about the host application.
 
---- 
+---
 
 ### The Goal
 
@@ -50,6 +50,7 @@ Just a widget.
 ### Feature-First Architecture
 
 Instead of building the chatbot into App.tsx, Orbie is structured as a feature module:
+
 ```text
 features/
   orbie-ai/
@@ -68,12 +69,13 @@ This gives us:
 
 The host app only passes configuration — everything else lives inside the feature.
 
---- 
+---
 
 ### Drop-In Usage
 
 Here’s what using Orbie looks like inside a host app:
 {% raw %}
+
 ```tsx
 <OrbieWidget
   config={{
@@ -87,6 +89,7 @@ Here’s what using Orbie looks like inside a host app:
   userId="123"
 />
 ```
+
 {% endraw %}
 
 That’s it.
@@ -95,7 +98,7 @@ That’s it.
 - No providers at the app level.
 - No shared state collisions.
 
---- 
+---
 
 ### API-Agnostic by Design
 
@@ -107,13 +110,14 @@ All it expects is:
 - a response shape it can render
 
 The service layer is injected:
+
 ```ts
-createChatbotService(apiBaseUrl)
+createChatbotService(apiBaseUrl);
 ```
 
 Which means you can point Orbie at:
 
-- a fortune teller [fortune-ai](https://github.com/cryshansen/fortune-ai) playground 
+- a fortune teller [fortune-ai](https://github.com/cryshansen/fortune-ai) playground
 - a support bot
 - an internal tools assistant
 - or a completely different backend later
@@ -134,7 +138,7 @@ They exist so you can:
 
 If you don’t need them — Orbie still works.
 
---- 
+---
 
 ### Testing as a First-Class Feature
 

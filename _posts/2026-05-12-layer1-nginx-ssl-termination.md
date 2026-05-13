@@ -29,7 +29,7 @@ In this stack, nginx has four jobs:
 3. **Access logging** — record every request at the perimeter
 4. **A first line of rate limiting** — before requests hit application threads
 
-It is *not* responsible for authentication, authorization, or business logic. The moment you start adding auth logic to nginx config, you're fighting the tool.
+It is _not_ responsible for authentication, authorization, or business logic. The moment you start adding auth logic to nginx config, you're fighting the tool.
 
 ---
 
@@ -38,6 +38,7 @@ It is *not* responsible for authentication, authorization, or business logic. Th
 ### Why terminate at nginx?
 
 Your application doesn't need to know about TLS. By terminating at nginx:
+
 - Certificate management is centralized in one place
 - The app connects to nginx over plain HTTP on a local port (never exposed externally)
 - You can upgrade TLS configuration without touching application code
@@ -80,6 +81,7 @@ ssl_stapling_verify on;
 ```
 
 **What each line does:**
+
 - `ssl_protocols` — TLS 1.0 and 1.1 are deprecated (RFC 8996). Never enable them.
 - `ssl_prefer_server_ciphers on` — the server's cipher preference wins, not the client's. Prevents a client from negotiating down to a weaker cipher.
 - `ssl_ciphers` — ECDHE cipher suites provide forward secrecy: even if the private key is later compromised, past sessions cannot be decrypted.
@@ -165,6 +167,7 @@ access_log /var/log/nginx/access.log detailed;
 In a multi-tenant setup, the same nginx process handles multiple domains. Without `host=` in the log line, you can't filter logs by tenant during an incident.
 
 **Why `$request_time` and `$upstream_response_time`?**
+
 - `$request_time` — wall clock from first byte received to last byte sent (includes network time)
 - `$upstream_response_time` — time the backend spent processing
 
@@ -292,4 +295,4 @@ The tenant resolution, JWT validation, and authorization logic in the layers tha
 
 ---
 
-*Next in the series: [Layer 2 — Tenant Resolution: How a Single API Instance Serves Multiple Customers Safely](/blog/2026/layer2-tenant-resolution)*
+_Next in the series: [Layer 2 — Tenant Resolution: How a Single API Instance Serves Multiple Customers Safely](/blog/2026/layer2-tenant-resolution)_

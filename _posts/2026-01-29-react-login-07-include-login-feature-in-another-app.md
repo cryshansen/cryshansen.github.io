@@ -220,4 +220,3 @@ So what we have covered to completion is a working authentication feature that i
 You can grab the finalized [version](https://github.com/cryshansen/login-feature-react) for your inhouse development to extend its capacity to suite your needs. Download drop into a features folder at your root, configure endpoints / routing and done!
 
 Alternatively, if you just want an app prebuild with login incorporated, you can download our test app integration at [base-login-app](https:/github.com/cryshansen/base-login-app)
-

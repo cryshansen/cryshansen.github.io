@@ -1,31 +1,39 @@
 # Docker Cheatsheet for the mindless chore
+
 Here’s a tight, practical Docker cheat sheet for reloading your app depending on what you need 👇
 
 ## 🔄 1. Restart a running container
 
 If your app is already built and you just want to restart it:
+
 ```bash
 docker restart <container_name>
 ```
+
 ---
 
 ## 🔁 2. Rebuild + restart (most common)
 
 When you changed code or dependencies:
+
 ```bash
     docker-compose down
     docker-compose up --build -d
 ```
+
 Or with newer syntax:
+
 ```bash
     docker compose down
     docker compose up --build -d
 ```
---- 
+
+---
 
 ## ⚡ 3. Fast reload (no rebuild)
 
 If you're using volumes (live code sync):
+
 ```bash
     docker compose restart
 ```
@@ -35,34 +43,40 @@ If you're using volumes (live code sync):
 ## 🧹 4. Clean rebuild (fix weird issues)
 
 When things are broken/cached badly:
+
 ```bash
     docker compose down -v
     docker compose build --no-cache
     docker compose up -d
 ```
+
 ## 🛑 5. Stop everything
+
 ```bash
     docker compose down
 ```
 
 ## 🔍 6. Check what's running
+
 ```bash
     docker ps
 ```
 
 ## 📜 7. View logs (super useful)
+
 ```bash
     docker compose logs -f
 ```
 
 ## 🎯 8. Restart ONE service only
+
 ```bash
     docker compose restart <service_name>
 ```
 
 ## 💡 Pro tips (this is usually what you want)
 
--   If code changes not showing → use --build
+- If code changes not showing → use --build
 
 - If permissions errors ("operation not permitted") → try:
 
@@ -76,11 +90,11 @@ If using Node/PHP dev → make sure volumes are mounted so you don’t rebuild e
 
 ## 🧠 Goal
 
-* Avoid re-downloading Hugging Face models
-* Work independently on:
+- Avoid re-downloading Hugging Face models
+- Work independently on:
 
-  * Python (AI service)
-  * Java (main app)
+  - Python (AI service)
+  - Java (main app)
 
 ---
 
@@ -178,10 +192,10 @@ docker compose up java
 
 ## 🎯 Pro Tips
 
-* Use volumes → no rebuild needed for code changes
-* Use `--build` only when dependencies change
-* Hugging Face cache = HUGE time saver
-* Keep services isolated → faster debugging
+- Use volumes → no rebuild needed for code changes
+- Use `--build` only when dependencies change
+- Hugging Face cache = HUGE time saver
+- Keep services isolated → faster debugging
 
 ---
 
@@ -202,15 +216,17 @@ docker compose restart
 ```
 
 ---
+
 🚀 Optional (next level optimization)
 
 If you want even faster builds:
 
 1. Pre-download model in Dockerfile
-RUN python -c "from transformers import pipeline; pipeline('sentiment-analysis')"
+   RUN python -c "from transformers import pipeline; pipeline('sentiment-analysis')"
 2. Use .dockerignore
 
 Avoid sending junk to build:
+
 ```text
 node_modules
 .git

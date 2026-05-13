@@ -49,11 +49,13 @@ Each filter has a single job. Let's audit each one.
 **What it does:** All traffic arrives at nginx on port 443. nginx terminates TLS using Let's Encrypt certificates (auto-renewed via certbot every 90 days) and proxies plain HTTP to the backend on an internal port.
 
 **Why it matters for auditing:**
+
 - You can inspect TLS version and cipher suite configuration in one place (`ssl_protocols`, `ssl_ciphers` directives).
 - Certificate expiry is the #1 cause of embarrassing production outages. Automating renewal and adding a monitoring alert (e.g., check cert expiry > 14 days) closes that gap.
 - All access logs at this layer capture real client IPs before any forwarding happens — important for rate limiting and abuse detection.
 
 **Audit checklist:**
+
 - [ ] TLS 1.2 minimum, TLS 1.3 preferred
 - [ ] Weak ciphers (`RC4`, `DES`, `3DES`) explicitly disabled
 - [ ] `X-Forwarded-For` and `X-Real-IP` headers set correctly so the app sees the real client IP
@@ -70,6 +72,7 @@ Each filter has a single job. Let's audit each one.
 This is the layer most unique to multi-tenant systems and the one most likely to be overlooked. If tenant context is missing or incorrectly set, a query could return rows from the wrong tenant — a silent data breach.
 
 **What to verify:**
+
 ```java
 // Every repository query should be scoped — never bare
 // Bad:  SELECT * FROM appointments
@@ -77,9 +80,10 @@ This is the layer most unique to multi-tenant systems and the one most likely to
 ```
 
 **Audit checklist:**
+
 - [ ] Unit test: request with `Host: tenant-a.example.com` never returns data belonging to `tenant-b.example.com`
 - [ ] Integration test: filter chain with no `Host` header returns `400 Bad Request`, never falls through to a default tenant
-- [ ] Hibernate filter is enabled on *all* entities that carry tenant data (easy to miss a new entity)
+- [ ] Hibernate filter is enabled on _all_ entities that carry tenant data (easy to miss a new entity)
 - [ ] Thread-local context is cleared in a `finally` block — not clearing it in a thread pool causes context bleed between requests
 
 ---
@@ -90,14 +94,15 @@ This is the layer most unique to multi-tenant systems and the one most likely to
 
 **Key decisions worth auditing:**
 
-| Setting | Our Choice | Why |
-|---|---|---|
-| Algorithm | HS256 (internal) / RS256 (OAuth2) | Symmetric for speed internally; asymmetric for external IdP |
-| Expiry | 1 hour | Short enough to limit blast radius on token leak |
-| Refresh | Sliding session cookie | Browser clients don't re-auth every hour |
-| Claims | `sub`, `domain`, `roles` | Tenant domain baked into the token — double-checks TenantContext |
+| Setting   | Our Choice                        | Why                                                              |
+| --------- | --------------------------------- | ---------------------------------------------------------------- |
+| Algorithm | HS256 (internal) / RS256 (OAuth2) | Symmetric for speed internally; asymmetric for external IdP      |
+| Expiry    | 1 hour                            | Short enough to limit blast radius on token leak                 |
+| Refresh   | Sliding session cookie            | Browser clients don't re-auth every hour                         |
+| Claims    | `sub`, `domain`, `roles`          | Tenant domain baked into the token — double-checks TenantContext |
 
 **Audit checklist:**
+
 - [ ] Algorithm is explicitly whitelisted — never `"alg": "none"`
 - [ ] Expiry (`exp`) claim is validated, not just parsed
 - [ ] Token domain claim is cross-checked against the resolved tenant context (defense in depth)
@@ -124,6 +129,7 @@ if (SecurityContextHolder.getContext().getAuthentication() != null
 ```
 
 **Audit checklist:**
+
 - [ ] API keys are hashed at rest — never stored in plaintext
 - [ ] Key rotation procedure is documented and tested
 - [ ] Endpoints accepting API key auth are explicitly enumerated — not a blanket allowance
@@ -155,6 +161,7 @@ config.setAllowedOrigins(List.of(
 ```
 
 **Audit checklist:**
+
 - [ ] CORS allowed origins are a static whitelist, not a regex that can be tricked (e.g., `evil-tenant-a.example.com`)
 - [ ] `@PreAuthorize` is present on all state-changing endpoints (POST, PATCH, DELETE)
 - [ ] Read endpoints that return sensitive data also carry `@PreAuthorize` — not just writes
@@ -166,13 +173,13 @@ config.setAllowedOrigins(List.of(
 
 Here's a condensed view of what to test at each layer:
 
-| Layer | Tool | Test Type |
-|---|---|---|
-| SSL / nginx | `testssl.sh`, `nmap --script ssl-enum-ciphers` | External scan |
-| Tenant isolation | JUnit + `MockMvc`, custom `UserRepositoryDomainIsolationTest` | Unit + integration |
-| JWT | JUnit `JwtAuthenticationFilterTest`, `JwtUtilTest` | Unit |
-| API Key | JUnit `ApiKeyFilterTest` (valid key, invalid key, session passthrough) | Unit |
-| Roles / CORS | Spring Security integration tests (`SecurityConfigIT`, `AdminTokenIT`) | Integration |
+| Layer            | Tool                                                                   | Test Type          |
+| ---------------- | ---------------------------------------------------------------------- | ------------------ |
+| SSL / nginx      | `testssl.sh`, `nmap --script ssl-enum-ciphers`                         | External scan      |
+| Tenant isolation | JUnit + `MockMvc`, custom `UserRepositoryDomainIsolationTest`          | Unit + integration |
+| JWT              | JUnit `JwtAuthenticationFilterTest`, `JwtUtilTest`                     | Unit               |
+| API Key          | JUnit `ApiKeyFilterTest` (valid key, invalid key, session passthrough) | Unit               |
+| Roles / CORS     | Spring Security integration tests (`SecurityConfigIT`, `AdminTokenIT`) | Integration        |
 
 Running these as part of CI means every pull request proves the security chain is intact — not just that business logic works.
 
@@ -207,4 +214,4 @@ When each layer has clear, testable responsibility, auditing becomes a checklist
 
 ---
 
-*Next up: how we handle email template overrides per tenant without leaking template data across tenant boundaries.*
+_Next up: how we handle email template overrides per tenant without leaking template data across tenant boundaries._

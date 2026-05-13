@@ -14,7 +14,7 @@ toc:
 
 > This post is part of the [Security Auditing in a Multi-Tenant SaaS](/blog/2026/security-auditing-layers-multitenant-saas) series. Each post deep-dives one layer of the filter chain.
 
-By the time a request reaches the JWT filter, nginx has already terminated TLS ([Layer 1](/blog/2026/layer1-nginx-ssl-termination)) and the tenant is resolved ([Layer 2](/blog/2026/layer2-tenant-resolution)). The system knows *which* customer this request is for. The JWT filter answers the next question: **who is the user, and are they who they say they are?**
+By the time a request reaches the JWT filter, nginx has already terminated TLS ([Layer 1](/blog/2026/layer1-nginx-ssl-termination)) and the tenant is resolved ([Layer 2](/blog/2026/layer2-tenant-resolution)). The system knows _which_ customer this request is for. The JWT filter answers the next question: **who is the user, and are they who they say they are?**
 
 ---
 
@@ -34,11 +34,11 @@ The tradeoff: a JWT cannot be revoked before expiry without additional infrastru
 
 JWTs support multiple signing algorithms. The choice matters significantly:
 
-| Algorithm | Type | Key Material | Use Case |
-|---|---|---|---|
-| `HS256` | Symmetric (HMAC) | Single shared secret | Internal API, same process issues and verifies |
-| `RS256` | Asymmetric (RSA) | Private key signs, public key verifies | External IdP, third-party verification |
-| `none` | None | — | **Never use. A well-known attack vector.** |
+| Algorithm | Type             | Key Material                           | Use Case                                       |
+| --------- | ---------------- | -------------------------------------- | ---------------------------------------------- |
+| `HS256`   | Symmetric (HMAC) | Single shared secret                   | Internal API, same process issues and verifies |
+| `RS256`   | Asymmetric (RSA) | Private key signs, public key verifies | External IdP, third-party verification         |
+| `none`    | None             | —                                      | **Never use. A well-known attack vector.**     |
 
 We use **HS256** for tokens issued by our own API and **RS256** for tokens issued by external identity providers (e.g., Google OAuth2). The algorithm must be explicitly whitelisted — never inferred from the token header.
 
@@ -213,7 +213,7 @@ Browser login flow:
   ← Body: { token: "<jwt>" }
 
 Subsequent requests (JWT still valid):
-  GET /api/... 
+  GET /api/...
   Authorization: Bearer <jwt>
   Cookie: session=<id>
   → JWT filter authenticates from Bearer token
@@ -249,6 +249,7 @@ String internalJwt = jwtUtil.generateToken(user, tenantDomain);
 ```
 
 **Never trust a Google token without verifying it.** The `verifier.verify()` call:
+
 1. Checks the signature against Google's current public keys (fetched and cached from `https://www.googleapis.com/oauth2/v3/certs`)
 2. Validates the `aud` claim matches your registered client ID
 3. Validates the `exp` claim
@@ -369,4 +370,4 @@ Tests
 
 ---
 
-*Next in the series: [Layer 4 — API Key Authentication: Securing Machine-to-Machine Requests](/blog/2026/layer4-api-key-authentication)*
+_Next in the series: [Layer 4 — API Key Authentication: Securing Machine-to-Machine Requests](/blog/2026/layer4-api-key-authentication)_

@@ -20,9 +20,9 @@ In this article, we’ll walk through how to structure a multi-tenant system so 
 
 Instead of building:
 
-* a therapist booking app
-* a photography studio booking app
-* a wellness room rental system
+- a therapist booking app
+- a photography studio booking app
+- a wellness room rental system
 
 You build a **platform engine**.
 
@@ -48,12 +48,12 @@ At the heart of the system is a **shared SaaS platform**.
 
 Core modules include:
 
-* authentication
-* tenant management
-* scheduling engine
-* payments
-* notifications
-* analytics
+- authentication
+- tenant management
+- scheduling engine
+- payments
+- notifications
+- analytics
 
 These modules are **industry-agnostic**.
 
@@ -145,15 +145,15 @@ Examples:
 
 Therapist module
 
-* appointment types
-* client notes
-* session history
+- appointment types
+- client notes
+- session history
 
 Photography module
 
-* studio capacity
-* equipment rental
-* hourly bookings
+- studio capacity
+- equipment rental
+- hourly bookings
 
 These modules plug into the same core system.
 
@@ -181,9 +181,9 @@ bookit.app/wellness-rooms
 
 Even though they run on the same backend, each vertical gets:
 
-* different onboarding
-* different terminology
-* different UI layouts
+- different onboarding
+- different terminology
+- different UI layouts
 
 This dramatically improves adoption.
 
@@ -284,9 +284,9 @@ Instead of building **one application**, you are building **an ecosystem of mini
 
 This approach enables founders to:
 
-* launch faster
-* expand into new industries
-* scale without duplicating code
+- launch faster
+- expand into new industries
+- scale without duplicating code
 
 If you're building a booking or service platform, designing for vertical multi-tenancy early can dramatically increase the long-term potential of your system.
 

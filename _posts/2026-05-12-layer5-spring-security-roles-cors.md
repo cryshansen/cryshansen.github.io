@@ -31,8 +31,8 @@ This is also where CORS is configured — determining which frontend origins are
 
 These terms are often conflated. In this filter chain they are strictly separated:
 
-- **Authentication** (Layers 3 and 4): *Who are you?* Verified by signature, token validity, key hash.
-- **Authorization** (Layer 5): *Are you allowed to do this?* Decided by roles, tenant context, and endpoint rules.
+- **Authentication** (Layers 3 and 4): _Who are you?_ Verified by signature, token validity, key hash.
+- **Authorization** (Layer 5): _Are you allowed to do this?_ Decided by roles, tenant context, and endpoint rules.
 
 A user can be perfectly authenticated but unauthorized — a valid `ROLE_USER` JWT that tries to reach an `ROLE_ADMIN` endpoint should get `403 Forbidden`, not `401 Unauthorized`. The distinction matters both for security semantics and client error handling.
 
@@ -406,13 +406,13 @@ Tests
 
 This is the final layer. When all five layers are working correctly, a request has passed:
 
-| Layer | Concern | Failure Response |
-|---|---|---|
-| nginx | TLS, rate limit, logging | Connection refused / 429 |
-| TenantResolverFilter | Tenant identity | 400 Bad Request |
-| JwtAuthenticationFilter | User identity | 401 Unauthorized |
-| ApiKeyFilter | Machine identity | 401 Unauthorized |
-| Spring Security | Authorization, CORS | 403 Forbidden / CORS error |
+| Layer                   | Concern                  | Failure Response           |
+| ----------------------- | ------------------------ | -------------------------- |
+| nginx                   | TLS, rate limit, logging | Connection refused / 429   |
+| TenantResolverFilter    | Tenant identity          | 400 Bad Request            |
+| JwtAuthenticationFilter | User identity            | 401 Unauthorized           |
+| ApiKeyFilter            | Machine identity         | 401 Unauthorized           |
+| Spring Security         | Authorization, CORS      | 403 Forbidden / CORS error |
 
 Each layer has a single job. Each layer has tests. Each layer fails explicitly rather than silently.
 
@@ -420,4 +420,4 @@ The result is a security chain you can audit by reading down the filter order �
 
 ---
 
-*This concludes the five-layer deep-dive series. Return to the overview: [Security Auditing in a Multi-Tenant SaaS: Layered Filters, JWT, and API Keys](/blog/2026/security-auditing-layers-multitenant-saas)*
+_This concludes the five-layer deep-dive series. Return to the overview: [Security Auditing in a Multi-Tenant SaaS: Layered Filters, JWT, and API Keys](/blog/2026/security-auditing-layers-multitenant-saas)_

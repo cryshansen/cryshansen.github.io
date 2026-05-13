@@ -258,7 +258,7 @@ This test is the most important test in the security suite. It should run on eve
 
 ## The Tenant Registry
 
-Knowing *which* domains are valid tenants is itself a security concern. Without a registry check, an attacker could craft a request with `Host: attacker.com` and potentially create a new tenant context in your system.
+Knowing _which_ domains are valid tenants is itself a security concern. Without a registry check, an attacker could craft a request with `Host: attacker.com` and potentially create a new tenant context in your system.
 
 The registry should be populated at startup from a trusted source (database, config file, environment variable) and cached. Invalid domains are rejected at the filter layer before any further processing.
 
@@ -314,8 +314,8 @@ Tests
 
 ## What Comes Next
 
-Once the tenant is resolved and set in context, the request knows *which* customer it's serving. The next question is *who* the user is — which is where JWT validation takes over.
+Once the tenant is resolved and set in context, the request knows _which_ customer it's serving. The next question is _who_ the user is — which is where JWT validation takes over.
 
 ---
 
-*Next in the series: [Layer 3 — JWT Authentication: Stateless Identity with Short-Lived Tokens](/blog/2026/layer3-jwt-authentication)*
+_Next in the series: [Layer 3 — JWT Authentication: Stateless Identity with Short-Lived Tokens](/blog/2026/layer3-jwt-authentication)_

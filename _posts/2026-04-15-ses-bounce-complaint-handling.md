@@ -67,7 +67,7 @@ SES sends email
 
 There are three notification types:
 
-- **Bounce** — the email could not be delivered. Two subtypes: *hard* (permanent, e.g. address doesn't exist) and *soft* (temporary, e.g. mailbox full).
+- **Bounce** — the email could not be delivered. Two subtypes: _hard_ (permanent, e.g. address doesn't exist) and _soft_ (temporary, e.g. mailbox full).
 - **Complaint** — the recipient marked the email as spam via their inbox client.
 - **Delivery** — optional confirmation that the email was successfully delivered (useful for audit logs, not required for reputation management).
 
@@ -95,6 +95,7 @@ AWS will send a confirmation request to your endpoint — your handler must resp
 **Step 3: Connect the topic to SES**
 
 In **SES → Verified Identities → your domain → Notifications**:
+
 - Set **Bounces** → your SNS topic
 - Set **Complaints** → your SNS topic
 - Optionally set **Deliveries** → your SNS topic
@@ -304,6 +305,7 @@ Beyond suppression, set up visibility into your sending health:
 **SES Account Dashboard** — In the AWS Console under SES, the account overview shows your current bounce and complaint rates. Check this weekly when you're ramping up volume.
 
 **CloudWatch Alarms** — SES publishes metrics to CloudWatch. Create alarms for:
+
 - `Reputation.BounceRate` > 3% → SNS alert
 - `Reputation.ComplaintRate` > 0.08% → SNS alert
 

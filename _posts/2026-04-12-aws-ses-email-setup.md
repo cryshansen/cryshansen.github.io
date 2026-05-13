@@ -67,12 +67,14 @@ This separation matters because it keeps your sending logic, template logic, and
 Before writing a single line of code, map out your email triggers. They fall into two categories:
 
 **Event-driven triggers** fire immediately in response to user action:
+
 - User signup and email verification
 - Appointment or booking confirmation
 - Password reset request
 - Payment receipt
 
 **Scheduled triggers** run on a timer regardless of user action:
+
 - Weekly or monthly summary reports
 - No-show reminders
 - Re-engagement nudges for inactive users

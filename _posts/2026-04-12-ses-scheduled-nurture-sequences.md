@@ -38,7 +38,7 @@ toc:
 
 ---
 
-Transactional emails respond to what users do. Marketing nurture emails respond to what users *haven't* done yet — or guide them through a journey based on where they are in the funnel. This post covers designing the trigger system that powers both, with a particular focus on scheduled sends and the conditional logic that makes nurture sequences effective rather than just noisy.
+Transactional emails respond to what users do. Marketing nurture emails respond to what users _haven't_ done yet — or guide them through a journey based on where they are in the funnel. This post covers designing the trigger system that powers both, with a particular focus on scheduled sends and the conditional logic that makes nurture sequences effective rather than just noisy.
 
 ---
 
@@ -48,22 +48,22 @@ Every email your application sends originates from one of two trigger types:
 
 **Event-driven triggers** fire immediately in response to a user action. They are synchronous from the application's perspective — the event happens, the email goes out:
 
-| Trigger | Template | Timing |
-|---|---|---|
-| Appointment booked | `BOOKING_CONFIRMATION` | Immediately |
-| User signs up | `SIGNUP_VERIFY` | Immediately |
-| Password reset requested | `PASSWORD_RESET` | Immediately |
-| Payment received | `PAYMENT_RECEIPT` | Immediately |
+| Trigger                  | Template               | Timing      |
+| ------------------------ | ---------------------- | ----------- |
+| Appointment booked       | `BOOKING_CONFIRMATION` | Immediately |
+| User signs up            | `SIGNUP_VERIFY`        | Immediately |
+| Password reset requested | `PASSWORD_RESET`       | Immediately |
+| Payment received         | `PAYMENT_RECEIPT`      | Immediately |
 
 **Scheduled triggers** run on a clock rather than a user event. They require a periodic job that evaluates which users meet a condition and sends accordingly:
 
-| Trigger | Template | Timing |
-|---|---|---|
-| Appointment tomorrow | `APPOINTMENT_REMINDER` | 24h before |
-| No-show detected | `NO_SHOW_FOLLOWUP` | 2h after missed appt |
-| Weekly report | `WEEKLY_SUMMARY` | Sunday 6 PM per tenant TZ |
-| Inactive user (7 days) | `REENGAGEMENT_D7` | Day 7 of inactivity |
-| Inactive user (14 days) | `REENGAGEMENT_D14` | Day 14 of inactivity |
+| Trigger                 | Template               | Timing                    |
+| ----------------------- | ---------------------- | ------------------------- |
+| Appointment tomorrow    | `APPOINTMENT_REMINDER` | 24h before                |
+| No-show detected        | `NO_SHOW_FOLLOWUP`     | 2h after missed appt      |
+| Weekly report           | `WEEKLY_SUMMARY`       | Sunday 6 PM per tenant TZ |
+| Inactive user (7 days)  | `REENGAGEMENT_D7`      | Day 7 of inactivity       |
+| Inactive user (14 days) | `REENGAGEMENT_D14`     | Day 14 of inactivity      |
 
 Both types flow through the same `EmailService` — the difference is only in what initiates the call.
 
@@ -315,12 +315,12 @@ If you're launching a new domain or IP address for marketing sends, **do not bla
 
 A conservative warmup schedule:
 
-| Week | Daily volume | Who to send to |
-|---|---|---|
-| 1 | 50–200 | Most engaged (opened/clicked in 90 days) |
-| 2 | 500–1,000 | Engaged (opened in 180 days) |
-| 3 | 2,000–5,000 | All opted-in contacts |
-| 4+ | Full volume | Maintain based on engagement |
+| Week | Daily volume | Who to send to                           |
+| ---- | ------------ | ---------------------------------------- |
+| 1    | 50–200       | Most engaged (opened/clicked in 90 days) |
+| 2    | 500–1,000    | Engaged (opened in 180 days)             |
+| 3    | 2,000–5,000  | All opted-in contacts                    |
+| 4+   | Full volume  | Maintain based on engagement             |
 
 Wire the warmup schedule into your enrollment processor by adding a configurable volume cap that increases on a schedule. Store the current warmup phase in config or a feature flag that you advance manually (or automate based on elapsed days).
 
@@ -348,6 +348,7 @@ CREATE TABLE email_send_log (
 Storing the SES `messageId` (returned from the send call) is particularly valuable: when a bounce notification arrives, it includes the original `messageId`, letting you trace exactly which send triggered the feedback.
 
 **Metrics to track:**
+
 - Emails sent per sequence per day
 - Step completion rates (what % reach step 3 vs drop out at step 1)
 - Exit reason distribution (converted vs unsubscribed vs bounced)

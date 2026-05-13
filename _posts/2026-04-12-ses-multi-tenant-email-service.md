@@ -34,7 +34,7 @@ toc:
 
 ---
 
-When a single application serves multiple tenants or brands, the question of *who is sending this email* becomes surprisingly nuanced. A booking confirmation sent to a client should appear to come from the business they booked with — not a generic platform address. This post covers how to model that cleanly in Spring and wire it into AWS SES.
+When a single application serves multiple tenants or brands, the question of _who is sending this email_ becomes surprisingly nuanced. A booking confirmation sent to a client should appear to come from the business they booked with — not a generic platform address. This post covers how to model that cleanly in Spring and wire it into AWS SES.
 
 ---
 
@@ -215,13 +215,13 @@ public class EmailTemplateRenderer {
 
 Using `[var_name]` (square brackets) instead of `{{ var }}` or `${var}` keeps templates editable by non-developers in a simple HTML editor without risk of accidentally triggering Thymeleaf or Liquid syntax. Common placeholders across templates:
 
-| Placeholder | Example value |
-|---|---|
-| `[first_name]` | Sarah |
-| `[booking_date]` | Tuesday, May 13 |
-| `[booking_time]` | 2:00 PM |
+| Placeholder       | Example value   |
+| ----------------- | --------------- |
+| `[first_name]`    | Sarah           |
+| `[booking_date]`  | Tuesday, May 13 |
+| `[booking_time]`  | 2:00 PM         |
 | `[business_name]` | Their Ma Studio |
-| `[reset_link]` | https://... |
+| `[reset_link]`    | https://...     |
 
 ---
 

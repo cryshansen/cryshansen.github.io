@@ -22,14 +22,14 @@ API keys solve this — but they introduce their own set of risks that need to b
 
 ## When to Use API Keys vs JWTs
 
-| Scenario | Auth Method | Why |
-|---|---|---|
-| User logs in via browser | JWT + session cookie | Short-lived, tied to identity, revocable via session |
-| Mobile client makes API calls | JWT | Stateless, short-lived |
-| Scheduled job (nightly report) | API key | Unattended, no human to re-auth |
-| Internal admin tooling | API key | Trusted internal caller, long-lived credential |
-| External webhook receiver | API key + signature | Inbound, no session possible |
-| Service-to-service (ML scorer) | API key or mTLS | Machine identity, no user context |
+| Scenario                       | Auth Method          | Why                                                  |
+| ------------------------------ | -------------------- | ---------------------------------------------------- |
+| User logs in via browser       | JWT + session cookie | Short-lived, tied to identity, revocable via session |
+| Mobile client makes API calls  | JWT                  | Stateless, short-lived                               |
+| Scheduled job (nightly report) | API key              | Unattended, no human to re-auth                      |
+| Internal admin tooling         | API key              | Trusted internal caller, long-lived credential       |
+| External webhook receiver      | API key + signature  | Inbound, no session possible                         |
+| Service-to-service (ML scorer) | API key or mTLS      | Machine identity, no user context                    |
 
 The key distinction is **attended vs. unattended**. If there's a human who can re-authenticate, use JWTs. If the caller is a machine running on a schedule or reacting to events, use an API key.
 
@@ -38,6 +38,7 @@ The key distinction is **attended vs. unattended**. If there's a human who can r
 ## The Filter
 
 The API key filter sits after the JWT filter in the chain. By the time a request reaches this filter, one of two things is true:
+
 1. The JWT filter already authenticated the request (SecurityContext is populated)
 2. No valid JWT was found (SecurityContext is empty)
 
@@ -97,6 +98,7 @@ public class ApiKeyFilter extends OncePerRequestFilter {
 This filter has a subtle interaction with the JWT/session filter that produced a real production bug worth documenting.
 
 **The scenario:**
+
 1. A browser user is logged in with a valid session cookie
 2. The user's request reaches the API key filter
 3. The request happens to include an `X-API-KEY` header (e.g., from a browser extension, a misconfigured fetch call, or a developer testing tool)
@@ -159,6 +161,7 @@ public ApiKeyPrincipal validate(String rawKey, String tenantDomain) {
 ```
 
 **Hashing algorithm choice:**
+
 - **SHA-256**: Fast, appropriate for API keys since the keys are long (256 bits of entropy) — brute force is infeasible regardless of hash speed.
 - **bcrypt**: Better for passwords (short, user-chosen secrets). Adds latency for a high-volume API key endpoint.
 
@@ -184,6 +187,7 @@ API keys must be tenant-scoped. A key for tenant A must not work against tenant 
 The `validate()` method above passes `tenantDomain` from `TenantContext` and matches it against the key's stored domain. A valid key for the wrong tenant returns `null` and the filter returns `401`.
 
 This means:
+
 - Keys can't be shared across tenants even intentionally
 - A compromised key for one tenant doesn't affect others
 - The tenant domain is part of the key's identity, visible in audit logs
@@ -195,6 +199,7 @@ This means:
 Unlike JWTs, API keys don't expire automatically. This is their advantage (no re-auth) and their liability (a leaked key stays valid until explicitly revoked).
 
 **Rotation procedure:**
+
 1. Create a new key (system returns plaintext once)
 2. Update the caller (scheduled job, script) with the new key
 3. Verify the new key is working
@@ -204,6 +209,7 @@ This is a zero-downtime rotation if done carefully. The two keys coexist briefly
 
 **Audit trail:**
 The `lastUsedAt` timestamp on each key makes it possible to:
+
 - Identify keys that haven't been used in 90+ days (candidates for removal)
 - Detect unexpected usage patterns (a key used at 3am that normally runs at midnight)
 - Confirm a rotated key is no longer being used before deletion
@@ -358,7 +364,7 @@ Tests
 
 ---
 
-*Next in the series: [Layer 5 — Spring Security: Role-Based Authorization and CORS](/blog/2026/layer5-spring-security-roles-cors)*
+_Next in the series: [Layer 5 — Spring Security: Role-Based Authorization and CORS](/blog/2026/layer5-spring-security-roles-cors)_
 
 ---
 
