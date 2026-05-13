@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"> <html><body> <h1 id="docker-cheatsheet-for-the-mindless-chore">Docker Cheatsheet for the mindless chore</h1> <p>Here’s a tight, practical Docker cheat sheet for reloading your app depending on what you need 👇</p> <h2 id="-1-restart-a-running-container">🔄 1. Restart a running container</h2> <p>If your app is already built and you just want to restart it:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker restart &lt;container_name&gt;
+</code></pre></div></div> <hr> <h2 id="-2-rebuild--restart-most-common">🔁 2. Rebuild + restart (most common)</h2> <p>When you changed code or dependencies:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    docker-compose down
+    docker-compose up <span class="nt">--build</span> <span class="nt">-d</span>
+</code></pre></div></div> <p>Or with newer syntax:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    docker compose down
+    docker compose up <span class="nt">--build</span> <span class="nt">-d</span>
+</code></pre></div></div> <hr> <h2 id="-3-fast-reload-no-rebuild">⚡ 3. Fast reload (no rebuild)</h2> <p>If you’re using volumes (live code sync):</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    docker compose restart
+</code></pre></div></div> <hr> <h2 id="-4-clean-rebuild-fix-weird-issues">🧹 4. Clean rebuild (fix weird issues)</h2> <p>When things are broken/cached badly:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    docker compose down <span class="nt">-v</span>
+    docker compose build <span class="nt">--no-cache</span>
+    docker compose up <span class="nt">-d</span>
+</code></pre></div></div> <h2 id="-5-stop-everything">🛑 5. Stop everything</h2> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    docker compose down
+</code></pre></div></div> <h2 id="-6-check-whats-running">🔍 6. Check what’s running</h2> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    docker ps
+</code></pre></div></div> <h2 id="-7-view-logs-super-useful">📜 7. View logs (super useful)</h2> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    docker compose logs <span class="nt">-f</span>
+</code></pre></div></div> <h2 id="-8-restart-one-service-only">🎯 8. Restart ONE service only</h2> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    docker compose restart &lt;service_name&gt;
+</code></pre></div></div> <h2 id="-pro-tips-this-is-usually-what-you-want">💡 Pro tips (this is usually what you want)</h2> <ul> <li> <p>If code changes not showing → use –build</p> </li> <li> <p>If permissions errors (“operation not permitted”) → try:</p> </li> </ul> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    docker compose down <span class="nt">-v</span>
+</code></pre></div></div> <p>If using Node/PHP dev → make sure volumes are mounted so you don’t rebuild every time</p> <h1 id="-docker-dev-cheat-sheet-java--python-hugging-face">🐳 Docker Dev Cheat Sheet (Java + Python Hugging Face)</h1> <h2 id="-goal">🧠 Goal</h2> <ul> <li>Avoid re-downloading Hugging Face models</li> <li> <p>Work independently on:</p> <ul> <li>Python (AI service)</li> <li>Java (main app)</li> </ul> </li> </ul> <hr> <h2 id="️-one-time-setup">⚙️ One-Time Setup</h2> <h3 id="start-everything-build--cache-models">Start everything (build + cache models)</h3> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker compose up <span class="nt">--build</span>
+</code></pre></div></div> <hr> <h2 id="-python-hugging-face">🐍 Python (Hugging Face)</h2> <h3 id="build--run-only-python">Build + run ONLY Python</h3> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker compose up <span class="nt">--build</span> python
+</code></pre></div></div> <h3 id="restart-python-fast-no-rebuild">Restart Python fast (no rebuild)</h3> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker compose restart python
+</code></pre></div></div> <h3 id="view-python-logs">View Python logs</h3> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker compose logs <span class="nt">-f</span> python
+</code></pre></div></div> <hr> <h2 id="-java-app">☕ Java App</h2> <h3 id="build--run-only-java">Build + run ONLY Java</h3> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker compose up <span class="nt">--build</span> java
+</code></pre></div></div> <h3 id="restart-java-only">Restart Java only</h3> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker compose restart java
+</code></pre></div></div> <h3 id="view-java-logs">View Java logs</h3> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker compose logs <span class="nt">-f</span> java
+</code></pre></div></div> <hr> <h2 id="-when-models-keep-re-downloading-fix">🔥 When models keep re-downloading (fix)</h2> <p>Make sure you have a volume:</p> <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">volumes</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">hf_cache:/root/.cache/huggingface</span>
+</code></pre></div></div> <hr> <h2 id="-clean-reset-only-if-broken">🧹 Clean Reset (only if broken)</h2> <p>⚠️ This WILL delete cached models</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker compose down <span class="nt">-v</span>
+docker compose up <span class="nt">--build</span>
+</code></pre></div></div> <hr> <h2 id="-fast-dev-workflow">⚡ Fast Dev Workflow</h2> <h3 id="working-on-python">Working on Python:</h3> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker compose up python
+</code></pre></div></div> <h3 id="working-on-java">Working on Java:</h3> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker compose up java
+</code></pre></div></div> <hr> <h2 id="-pro-tips">🎯 Pro Tips</h2> <ul> <li>Use volumes → no rebuild needed for code changes</li> <li>Use <code class="language-plaintext highlighter-rouge">--build</code> only when dependencies change</li> <li>Hugging Face cache = HUGE time saver</li> <li>Keep services isolated → faster debugging</li> </ul> <hr> <h2 id="-best-daily-commands">✅ Best Daily Commands</h2> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Start one service</span>
+docker compose up python
+
+<span class="c"># Rebuild one service</span>
+docker compose up <span class="nt">--build</span> java
+
+<span class="c"># Check logs</span>
+docker compose logs <span class="nt">-f</span>
+
+<span class="c"># Restart fast</span>
+docker compose restart
+</code></pre></div></div> <hr> <p>🚀 Optional (next level optimization)</p> <p>If you want even faster builds:</p> <ol> <li>Pre-download model in Dockerfile RUN python -c “from transformers import pipeline; pipeline(‘sentiment-analysis’)”</li> <li>Use .dockerignore</li> </ol> <p>Avoid sending junk to build:</p> <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>node_modules
+.git
+__pycache__
+</code></pre></div></div> </body></html>

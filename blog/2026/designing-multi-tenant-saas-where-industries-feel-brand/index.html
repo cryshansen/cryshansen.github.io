@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"> <html><body> <h1 id="designing-a-multi-tenant-saas-where-each-industry-feels-like-its-own-product">Designing a Multi-Tenant SaaS Where Each Industry Feels Like Its Own Product</h1> <p>When building SaaS platforms, founders often face a dilemma:</p> <p>Should we build separate apps for each industry, or create one platform for everyone?</p> <p>If you build separate apps, you duplicate infrastructure and maintenance. If you build a single generic platform, the product often feels too broad and unfocused.</p> <p>The solution is <strong>vertical multi-tenant architecture</strong>.</p> <p>This approach allows you to build <strong>one core platform</strong> while delivering <strong>industry-specific experiences</strong> that feel like separate products.</p> <p>This is the approach used by platforms like Shopify and other modern SaaS ecosystems.</p> <p>In this article, we’ll walk through how to structure a multi-tenant system so that different industries—such as therapists, photographers, and wellness studios—can all run on the same backend while experiencing a tailored product.</p> <hr> <h2 id="the-core-concept-one-platform-many-vertical-products">The Core Concept: One Platform, Many Vertical Products</h2> <p>Instead of building:</p> <ul> <li>a therapist booking app</li> <li>a photography studio booking app</li> <li>a wellness room rental system</li> </ul> <p>You build a <strong>platform engine</strong>.</p> <p>Each tenant belongs to an <strong>industry type</strong>, and the platform dynamically adapts the experience.</p> <p>For example:</p> <table> <thead> <tr> <th>Tenant</th> <th>Industry</th> <th>Product Experience</th> </tr> </thead> <tbody> <tr> <td>Calm Therapy</td> <td>Therapist</td> <td>Appointment booking + client notes</td> </tr> <tr> <td>LightSpace Studio</td> <td>Photography</td> <td>Studio rental calendar</td> </tr> <tr> <td>Zen Wellness</td> <td>Wellness</td> <td>Room scheduling</td> </tr> </tbody> </table> <p>The backend remains the same.</p> <p>The <strong>product layer changes per industry</strong>.</p> <hr> <h2 id="layer-1-core-platform-engine">Layer 1: Core Platform Engine</h2> <p>At the heart of the system is a <strong>shared SaaS platform</strong>.</p> <p>Core modules include:</p> <ul> <li>authentication</li> <li>tenant management</li> <li>scheduling engine</li> <li>payments</li> <li>notifications</li> <li>analytics</li> </ul> <p>These modules are <strong>industry-agnostic</strong>.</p> <p>In a Spring Boot system, this might look like:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>core-platform
+ ├── auth
+ ├── tenants
+ ├── scheduling
+ ├── billing
+ └── notifications
+</code></pre></div></div> <p>Every industry uses these modules.</p> <hr> <h2 id="layer-2-tenant-configuration">Layer 2: Tenant Configuration</h2> <p>Each tenant stores configuration describing its vertical.</p> <p>Example tenant table:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Tenant
+------
+id
+name
+industry_type
+plan
+settings_json
+</code></pre></div></div> <p>Example values:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>industry_type = therapist
+industry_type = photography
+industry_type = wellness
+</code></pre></div></div> <p>This field determines which <strong>features and UI elements appear</strong>.</p> <hr> <h2 id="layer-3-feature-flags-by-industry">Layer 3: Feature Flags by Industry</h2> <p>Instead of creating separate codebases, features are enabled dynamically.</p> <p>Example:</p> <table> <thead> <tr> <th>Feature</th> <th>Therapist</th> <th>Photography</th> </tr> </thead> <tbody> <tr> <td>client_notes</td> <td>enabled</td> <td>disabled</td> </tr> <tr> <td>studio_capacity</td> <td>disabled</td> <td>enabled</td> </tr> <tr> <td>recurring_sessions</td> <td>enabled</td> <td>optional</td> </tr> </tbody> </table> <p>In code:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if (tenant.hasFeature("client_notes")) {
+    showClientNotes();
+}
+</code></pre></div></div> <p>This allows the same system to behave differently per industry.</p> <hr> <h2 id="layer-4-vertical-modules">Layer 4: Vertical Modules</h2> <p>Some industries need specialized logic.</p> <p>Rather than duplicating the platform, create <strong>vertical modules</strong>.</p> <p>Example structure:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>modules
+ ├── therapist-module
+ ├── photography-module
+ └── wellness-module
+</code></pre></div></div> <p>Each module extends the platform.</p> <p>Examples:</p> <p>Therapist module</p> <ul> <li>appointment types</li> <li>client notes</li> <li>session history</li> </ul> <p>Photography module</p> <ul> <li>studio capacity</li> <li>equipment rental</li> <li>hourly bookings</li> </ul> <p>These modules plug into the same core system.</p> <hr> <h2 id="layer-5-vertical-frontend-experiences">Layer 5: Vertical Frontend Experiences</h2> <p>Each industry should feel like its <strong>own product</strong>.</p> <p>Example domains:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>therapist.bookit.app
+studio.bookit.app
+wellness.bookit.app
+</code></pre></div></div> <p>Or vertical landing pages:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bookit.app/therapists
+bookit.app/photography-studios
+bookit.app/wellness-rooms
+</code></pre></div></div> <p>Even though they run on the same backend, each vertical gets:</p> <ul> <li>different onboarding</li> <li>different terminology</li> <li>different UI layouts</li> </ul> <p>This dramatically improves adoption.</p> <hr> <h2 id="layer-6-shared-data-model-with-extensions">Layer 6: Shared Data Model with Extensions</h2> <p>A clean data model prevents fragmentation.</p> <p>Example base model:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Booking
+-------
+id
+tenant_id
+start_time
+end_time
+customer_id
+resource_id
+</code></pre></div></div> <p>Then extend per vertical.</p> <p>Example therapist extension:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SessionDetails
+--------------
+booking_id
+session_type
+notes
+</code></pre></div></div> <p>Example studio extension:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>StudioRental
+------------
+booking_id
+equipment_list
+capacity
+</code></pre></div></div> <p>This keeps the core model stable while allowing specialization.</p> <hr> <h2 id="layer-7-platform-flywheel">Layer 7: Platform Flywheel</h2> <p>Once the platform supports multiple industries, growth becomes easier.</p> <p>Each vertical becomes its own <strong>micro-SaaS funnel</strong>.</p> <p>Example:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Photographers join
+↓
+Clients book sessions
+↓
+Clients become photographers
+↓
+New tenants join
+</code></pre></div></div> <p>You can repeat this pattern across industries.</p> <hr> <h2 id="benefits-of-this-architecture">Benefits of This Architecture</h2> <p>This structure provides several advantages:</p> <h3 id="faster-product-expansion">Faster product expansion</h3> <p>Adding a new vertical requires only a module and configuration.</p> <h3 id="lower-maintenance-cost">Lower maintenance cost</h3> <p>You maintain <strong>one platform instead of multiple apps</strong>.</p> <h3 id="industry-specific-experiences">Industry-specific experiences</h3> <p>Each market feels like it has its own product.</p> <h3 id="compounding-growth">Compounding growth</h3> <p>Each vertical becomes a growth channel.</p> <hr> <h2 id="final-thoughts">Final Thoughts</h2> <p>A vertical multi-tenant platform allows you to think beyond a single SaaS product.</p> <p>Instead of building <strong>one application</strong>, you are building <strong>an ecosystem of mini SaaS products</strong> powered by a shared engine.</p> <p>This approach enables founders to:</p> <ul> <li>launch faster</li> <li>expand into new industries</li> <li>scale without duplicating code</li> </ul> <p>If you’re building a booking or service platform, designing for vertical multi-tenancy early can dramatically increase the long-term potential of your system.</p> <p>Your SaaS stops being a single product—and becomes a <strong>platform capable of powering many businesses.</strong></p> </body></html>

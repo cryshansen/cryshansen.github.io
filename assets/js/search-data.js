@@ -37,11 +37,154 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-the-gpu-less-ai-server-running-heavy-py",
+        },{id: "post-layer-5-spring-security-role-based-authorization-and-cors",
         
-          title: "The Gpu Less Ai Server Running Heavy Py",
+          title: "Layer 5 — Spring Security: Role-Based Authorization and CORS",
+        
+        description: "A deep dive into Spring Security&#39;s authorization layer — covering @PreAuthorize, tenant-scoped roles, CORS configuration mistakes, and the integration tests that validate the full security chain.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/layer5-spring-security-roles-cors/";
+          
+        },
+      },{id: "post-layer-4-api-key-authentication-securing-machine-to-machine-requests",
+        
+          title: "Layer 4 — API Key Authentication: Securing Machine-to-Machine Requests",
+        
+        description: "A deep dive into API key authentication in a Spring Boot multi-tenant API — covering when to use keys vs JWTs, hashing at rest, the session passthrough bug, and a complete test matrix.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/layer4-api-key-authentication/";
+          
+        },
+      },{id: "post-layer-2-tenant-resolution-how-a-single-api-instance-serves-multiple-customers-safely",
+        
+          title: "Layer 2 — Tenant Resolution: How a Single API Instance Serves Multiple Customers...",
+        
+        description: "A deep dive into multi-tenant data isolation using Host-header-based tenant resolution, thread-local context, and Hibernate filters — including the failure modes that cause data leakage.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/layer2-tenant-resolution/";
+          
+        },
+      },{id: "post-layer-1-nginx-as-your-security-perimeter-ssl-termination-and-access-logging",
+        
+          title: "Layer 1 — nginx as Your Security Perimeter: SSL Termination and Access Logging...",
+        
+        description: "A deep dive into using nginx as the outermost security layer in a multi-tenant SaaS — covering TLS configuration, Let&#39;s Encrypt automation, access log design, and rate limiting.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/layer1-nginx-ssl-termination/";
+          
+        },
+      },{id: "post-setting-up-transactional-amp-marketing-email-with-aws-ses",
+        
+          title: "Setting Up Transactional &amp; Marketing Email with AWS SES",
+        
+        description: "A developer&#39;s guide to configuring AWS SES for transactional email, DNS authentication, multi-tenant templates, and marketing nurture sequences.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/aws-ses-email-setup/";
+          
+        },
+      },{id: "post-security-auditing-in-a-multi-tenant-saas-layered-filters-jwt-and-api-keys",
+        
+          title: "Security Auditing in a Multi-Tenant SaaS: Layered Filters, JWT, and API Keys",
+        
+        description: "A practical walkthrough of how a layered security filter chain protects a multi-tenant Spring Boot API — covering SSL termination, tenant isolation, JWT validation, API key auth, and role-based access.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/security-auditing-layers-multitenant-saas/";
+          
+        },
+      },{id: "post-layer-3-jwt-authentication-stateless-identity-with-short-lived-tokens",
+        
+          title: "Layer 3 — JWT Authentication: Stateless Identity with Short-Lived Tokens",
+        
+        description: "A deep dive into JWT authentication in a Spring Boot multi-tenant API — covering algorithm choice, claim design, expiry, token validation order, and the tests that prove it&#39;s working.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/layer3-jwt-authentication/";
+          
+        },
+      },{id: "post-sns-bounce-amp-complaint-webhook-handling-with-aws-ses",
+        
+          title: "SNS Bounce &amp; Complaint Webhook Handling with AWS SES",
+        
+        description: "How to configure AWS SNS to receive SES bounce and complaint notifications, expose a webhook endpoint, and maintain a suppression list that protects your sending reputation.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/ses-bounce-complaint-handling/";
+          
+        },
+      },{id: "post-building-sovereign-social-automation-with-meta-39-s-system-users",
+        
+          title: "Building Sovereign Social Automation with Meta&#39;s System Users",
+        
+        description: "A technical guide on bypassing session flakes using Meta System Users for multi-tenant SaaS.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/building-sovereign-social-automation/";
+          
+        },
+      },{id: "post-scheduled-email-triggers-amp-nurture-sequence-architecture",
+        
+          title: "Scheduled Email Triggers &amp; Nurture Sequence Architecture",
+        
+        description: "How to design and implement a scheduled email trigger system and multi-step marketing nurture sequences using Spring Scheduler, conditional state evaluation, and AWS SES.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/ses-scheduled-nurture-sequences/";
+          
+        },
+      },{id: "post-multi-tenant-from-address-resolution-amp-spring-emailservice",
+        
+          title: "Multi-Tenant FROM Address Resolution &amp; Spring EmailService",
+        
+        description: "How to build a Spring @Service that resolves the correct sender address per tenant and renders per-tenant email templates from a database or file fallback.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/ses-multi-tenant-email-service/";
+          
+        },
+      },{id: "post-docker-cheat-sheet-for-the-mindless",
+        
+          title: "Docker Cheat Sheet For The Mindless",
         
         description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/docker-cheat-sheet-for-the-mindless/";
+          
+        },
+      },{id: "post-designing-multi-tenant-saas-where-industries-feel-brand",
+        
+          title: "Designing Multi Tenant Saas Where Industries Feel Brand",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/designing-multi-tenant-saas-where-industries-feel-brand/";
+          
+        },
+      },{id: "post-the-gpu-less-ai-server-running-heavy-python-models-and-java-apps-on-a-budget",
+        
+          title: "The GPU-less AI Server: Running Heavy Python Models and Java Apps on a...",
+        
+        description: "Running a GPU-less Spring Boot app with python models.",
         section: "Posts",
         handler: () => {
           
