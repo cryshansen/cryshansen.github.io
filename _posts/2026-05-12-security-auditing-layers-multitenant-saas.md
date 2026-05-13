@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Security Auditing in a Multi-Tenant SaaS: Layered Filters, JWT, and API Keys"
-date: 2026-05-12 09:00:00 -0500
+date: 2026-05-12
 description: A practical walkthrough of how a layered security filter chain protects a multi-tenant Spring Boot API — covering SSL termination, tenant isolation, JWT validation, API key auth, and role-based access.
 tags: [security, spring-boot, multi-tenant, jwt, saas, devops]
 categories: architecture

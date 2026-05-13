@@ -44,7 +44,7 @@ Post to Instagram: (2-step container process with a 45s sleep).
 
 Post to Facebook Feed: Direct POST to /{page_id}/feed using the Page Token.
 
-{% include figure.html path="assets/img/posts/social-flow.png" title="Automation Workflow" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid path="assets/img/posts/social-flow.png" title="Automation Workflow" class="img-fluid rounded z-depth-1" %}
 
 For Tenants (The Handshake)
 When a new user joins the platform, they simply:
@@ -56,11 +56,3 @@ Accept our Tester Invite.
 Confirm the connection in their Page Settings.
 
 This creates a seamless "Sovereign" bridge where the user owns their data, and Fluxo provides the power.
-
-
-### 3. Tips for al-folio Customization
-* **Images:** If you have a diagram of your infrastructure, place it in `assets/img/posts/` and use the `{% raw %}{% include figure.html ... %}{% endraw %}` tag as shown above.
-* **Math/Equations:** If you want to get fancy with the lead-scoring logic, al-folio supports MathJax. You can use $ $ for inline math.
-* **Social Preview:** Since this template is built for researchers/developers, ensure your `description` in the Front Matter is punchy; it will show up on your "Projects" or "Blog" index page.
-
-Would you like me to help you refine the **lead-scorer** section of this post to show off the logic behind *when* the bot decides to post?

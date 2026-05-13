@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Layer 3 — JWT Authentication: Stateless Identity with Short-Lived Tokens"
-date: 2026-05-12 09:20:00 -0500
+date: 2026-05-12
 description: A deep dive into JWT authentication in a Spring Boot multi-tenant API — covering algorithm choice, claim design, expiry, token validation order, and the tests that prove it's working.
 tags: [jwt, authentication, spring-boot, security, oauth2, java]
-categories: architecture
+categories: [architecture]
 series: security-layers
 giscus_comments: true
 related_posts: true

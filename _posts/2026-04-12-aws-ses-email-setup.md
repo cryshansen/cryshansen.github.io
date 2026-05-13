@@ -224,6 +224,6 @@ Where SES becomes genuinely powerful for growth is as the backbone of a **market
 
 This overview covers the foundations. The three follow-up posts go deep on the implementation details:
 
-- [Part 2: Multi-Tenant FROM Address Resolution & Spring EmailService]({% post_url 2026-05-12-ses-multi-tenant-email-service %}) — how to resolve the correct sender address per tenant and wire up the Spring service layer
-- [Part 3: SNS Bounce & Complaint Webhook Handling]({% post_url 2026-05-12-ses-bounce-complaint-handling %}) — protecting your sending reputation with automated suppression
-- [Part 4: Scheduled Email Triggers & Nurture Sequence Architecture]({% post_url 2026-05-12-ses-scheduled-nurture-sequences %}) — building the scheduler and conditional logic that powers marketing nurture
+- [Part 2: Multi-Tenant FROM Address Resolution & Spring EmailService]({% post_url 2026-04-12-ses-multi-tenant-email-service %}) — how to resolve the correct sender address per tenant and wire up the Spring service layer
+- [Part 3: SNS Bounce & Complaint Webhook Handling]({% post_url 2026-04-15-ses-bounce-complaint-handling %}) — protecting your sending reputation with automated suppression
+- [Part 4: Scheduled Email Triggers & Nurture Sequence Architecture]({% post_url 2026-04-12-ses-scheduled-nurture-sequences %}) — building the scheduler and conditional logic that powers marketing nurture
