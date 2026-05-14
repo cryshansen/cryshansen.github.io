@@ -3,86 +3,135 @@
   contents:
     - name: Full Name
       value: Crystal Hansen
-    - name: Date of Birth
-      value: na
+    - name: Label
+      value: Full Stack Developer
     - name: Languages
       value: English
 
 - title: Education
   type: time_table
   contents:
-    - title: Computer Systems Technology diploma
+    - title: Computer Systems Technology Diploma
       institution: Northern Alberta Institute of Technology, Edmonton, Alberta
-      year: 2009
+      year: 2006 - 2009
       description:
         - Java, C#, .Net full stack development
-        - Databases - Oracle, MS SQL, Architecture, Crystal Reporting
+        - Databases — Oracle, MS SQL, Architecture, Crystal Reporting
         - title: Team Project
           contents:
             - Historical Building Website
-    - title: BA Art & Art History
+    - title: BA Fine Art and Art History
       institution: University of Saskatchewan, Saskatoon, Saskatchewan
-      year: 2005
+      year: 2002 - 2005
       description:
-        - Fine Art Study.
-        - Computer Science courses
+        - Fine Art, Computer Science courses, History, Statistics
     - title: Multimedia Certificate
       institution: University of Alberta Extension, Edmonton, Alberta
-      year: 2002
+      year: 2001 - 2002
       description:
-        - Front End Technologies, HTML, CSS, Javascript
-        - System Architecture and Databases, mysql, flex
+        - Front End Technologies — HTML, CSS, Javascript, Flash, MySQL
+        - System Architecture and Databases
+    - title: Desktop Publishing Diploma
+      institution: International Correspondence Schools
+      year: 1995 - 1996
+      description:
+        - Computer Systems, Desktop Publishing, Information Sciences
 
 - title: Experience
   type: time_table
   contents:
-    - title: Freelance Developer and Founder
-      institution: crystalhansenartographic
-      year: 2009 -
+    - title: Freelance Developer & Founder
+      institution: Crystal Hansen Artographic
+      year: 2025 -
       description:
-        - Development of start-up concepts, a full-stack web portfolio and booking platform using React (Vite, TypeScript), Node.js (Express + Cron) Server backend included, and a PHP API backend for production server. Integrated dynamic image galleries, product listings, and studio scheduling with automated daily data generation and SEO optimization using React Helmet and .htaccess routing
-        - Personal Developer concepts
-        - Freelance web developments
-        - title: zackly-rite.ca
-          contents:
-            - Massage Therapy one page site
-            - Booking system integration of AWS
-        - artog.co - social media website
-        - pinmento.com - mapping pin application for organization and photo collaborations
-    - title: Web Developer
+        - Full-stack development (Angular, React, Node.js, Spring Boot, PHP) with DevOps and deployment
+        - Multi-tenant SaaS platform with 5-layer security architecture — Nginx SSL termination, tenant resolution middleware, JWT authentication, API key auth, and Spring Security CORS/roles
+        - AWS SES multi-tenant email service with bounce and complaint handling, suppression lists, and scheduled nurture sequences
+        - React SPA booking app with RESTful APIs, reCAPTCHA, PDF generation, and CI/CD on AWS
+        - Spring Boot AI microservice (Fortune-AI) deployed to AWS EC2
+    - title: Web Developer (Full-Stack)
       institution: PGSTech, Montreal, Quebec
-      year: 2021.03 - 2025.04
+      year: 2021 - 2025
       description:
-        - Developed new functionality and conversions of base php into content types, modules and features
-        - Integrations of APIs connecting third party systems.
-        - OAuth, RBA, CL/CI
-
-    - title: IT Risk Manager - Java developer
-      institution: Canadian Western Bank, Edmonton, Alberta.
-      year: 2018-2019
+        - Full-stack development of internal and public-facing platforms using PHP, Drupal, and cloud tools
+        - Drupal CMS and CRM migrations with SEO optimization and URL consistency
+        - Integrated HubSpot APIs, Brevo API, and PayPal gateway with Drupal
+        - Built custom modules for file handling, star ratings, and subscriptions
+    - title: Freelance Developer
+      institution: Crystal Hansen Artographic
+      year: 2019 - 2021
       description:
-
+        - SaaS and booking platforms using Angular, Java, Spring Boot, and cloud technologies
+        - Studio Booking & Rentals SaaS, Gallery & Portfolio platform, Python screen scraper
+    - title: Manager, Risk Technology and Model Deployment
+      institution: Canadian Western Bank, Edmonton, Alberta
+      year: 2018 - 2019
+      description:
+        - Led full-stack development of credit risk scorecard applications using Java, Angular, SAS, and SQL
+        - Led sprint cycles, demonstrations, and stakeholder buy-in using Agile methodology
     - title: IT Risk Analyst
-      institution: Canadian Western Bank, Edmonton, Alberta.
+      institution: Canadian Western Bank, Edmonton, Alberta
       year: 2016 - 2018
       description:
-
+        - Developed risk scorecard applications (IPRE, SME, SBE, LargeCorp) using Angular and JavaScript
+        - Managed full lifecycle of Cerberus default management system (Struts, Angular)
+        - Built Java-based work tracking and reporting systems (SAS, CSS, REST)
     - title: Application Developer II
-      institution: Canadian Western Bank, Edmonton, Alberta.
+      institution: Canadian Western Bank, Edmonton, Alberta
       year: 2013 - 2016
       description:
-
+        - Led T24 Banking System migration using SQL Server SSIS, DDL/DML transformations
+        - Created CRM and financial data models for Verafin, ISO, and Central 1 integrations
+        - Worked in Java, .NET (VB.NET, C#), PowerShell, and Excel for ETL/DevOps tasks
     - title: Web Developer II
-      institution: Canadian Western Bank, Edmonton, Alberta.
+      institution: Canadian Western Bank, Edmonton, Alberta
       year: 2011 - 2013
       description:
+        - Supported internal client systems with .NET and Java — legacy modernization across MS SQL, MySQL, Oracle
+        - title: Key Projects
+          contents:
+            - CWBCareers (.NET, VB), INFOServer (.NET 3.5, C#), Wave (JavaScript, Java)
 
-- title: Open Source Projects
+- title: Projects
   type: time_table
   contents:
-    - title: <a href="https://github.com/cryshansen/calendar">calendar</a>
-      year: 2015-now
-      description: A simple angular / node.js calendar connecting fullcalendar.js with a database.
+    - title: <a href="https://artog.co">Artog.co</a>
+      year: 2024 -
+      description: Social media and operations platform for photographers, models, and creatives. Role-based access, Photography CMS, Drupal, booking workflows.
+    - title: <a href="https://pinmento.com">Pinmento</a>
+      year: 2023 -
+      description: Geolocation-based journaling app. Drop pins on a Google Map and attach journal entries. Drupal front end, Google Maps JavaScript API, Oribie AI chatbot embedded.
+    - title: <a href="https://cryshansen.github.io/studio-booker">Studio Booker</a>
+      year: 2024 -
+      description: Angular-based booking system with session state cart, time slot management, PDF confirmation and checkout.
+    - title: <a href="https://github.com/cryshansen/flask-generate-sales">Sales Data Trend Generator</a>
+      year: 2024 -
+      description: Python Flask microservice for generating simulated photography sales data to support Drupal dashboard testing.
+    - title: Fortune-AI
+      year: 2025 -
+      description: Spring Boot AI microservice for fortune-style and emotionally intelligent prompts. Integrated with OpenAI GPT and deployed to AWS EC2.
+    - title: <a href="https://github.com/cryshansen/calendar">Calendar</a>
+      year: 2015 -
+      description: Angular / Node.js calendar connecting FullCalendar.js with a database.
+
+- title: Skills
+  type: nested_list
+  contents:
+    - title: Languages & Frameworks
+      items:
+        - Java, Node.js, Python, PHP, .NET (C#, VB), Flask, Express
+        - Angular, React, TypeScript, JSX, HTML5, CSS3, Bootstrap 5, RxJS
+        - Spring MVC, Spring Boot, Hibernate, JDBC, RESTful APIs, SOAP
+    - title: Databases & Cloud
+      items:
+        - MySQL, PostgreSQL, SQL Server, MariaDB, Oracle, SAS EG, RDS
+        - AWS (EC2, RDS, SES), Azure, GCP
+        - Docker, Nginx, Apache, Tomcat, Ubuntu / Linux
+    - title: DevOps & Security
+      items:
+        - Git, GitHub Actions, Jenkins, CI/CD pipelines, Agile
+        - Drupal, WordPress, SEO, Google Search Console, Google Analytics
+        - OAuth, JWT, RBAC, DKIM, SPF, Spring Security, API key authentication
 
 - title: Honors and Awards
   type: time_table
@@ -90,24 +139,15 @@
     - year: 2017
       items:
         - Q3 2017 Pillars of Excellence Nominees
-        - Pillar of Excellence award is offered by CWB as a nomination platform by its employees to acknowledge one another on exceptional performance.
-    - year: 2003,2004, 2006, 2007
+        - Pillar of Excellence — CWB peer nomination for exceptional performance
+    - year: 2003, 2004, 2006, 2007
       items:
         - Jason Lang Scholarship
         - Awarded for academic performance
 
-- title: Academic Interests
-  type: nested_list
-  contents:
-    - title: Modern Full Stack Development
-      items:
-        - React, Angular, TypeScript
-    - title: Back end Java & .Net Development
-      items:
-        - WebAPI, Azure
-        - Spring Boot, Spring API's
-
-- title: Other Interests
+- title: Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Photography, Lightboxes, Soap making etc.
+    - Cloud Computing — AWS, EC2, RDS, Google Cloud, Azure
+    - Photography — Composition, ISO, Photoshop, Lighting, digital enhancement
+    - Illustrations — Lightboxes, logo creation, digital drawing and painting

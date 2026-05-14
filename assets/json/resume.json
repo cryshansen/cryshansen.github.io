@@ -32,12 +32,13 @@
       "location": "Montreal, QC",
       "summary": "Built and maintained client websites, applications, and internal tools independently. Specialized in full-stack development (Angular, React, Node.js, Spring Boot, PHP) with DevOps and deployment experience. Integrated complex systems including calendar booking, real-time availability, PDF generation, SEO, and e-commerce tools.",
       "highlights": [
-        "Developed a modular React single-page booking app integrating RESTful APIs, calendar availability, PDF/email confirmations, reCAPTCHA, and SEO using React Helmet. CI/CD pipeline for deployment on AWS & shared hosting. Tech stack: - React SPA + PHP API, PHPMailer, Google Calendar API",
-        "Built a studio management SPA with scheduling, rentals, PDF invoices, and calendar views using Angular 18 standalone components and reactive forms. Tech stack: - Angular 17, FullCalendar, html2pdf, localStorage, Store. ",
-        "Full-stack portfolio and storefront with dynamic image galleries, studio scheduler,automated SEO via React Helmet and .htaccess routing. Included cron-based data automation, backend maintenance, and CI/CD pipelines. Tech stack: — React SPA + PHP API",
-        "Developed a microservice-based chatbot API for fortune prompt and custom prompt workflows. Integrated API with scalable deployment. Tech stack: — Spring Boot, OpenAI GPT, AWS EC2| deployed AWS",
-        "Created a mock sales data generation tool for a dashboard simulating photography trends Tech stack: - Python, Flask, Drupal, Drupal Cron, PHP | deployed.",
-        "Migrated and consolidated legacy booking systems into a unified API platform with REST endpoints and cloud deployment (AWS/GCP) AWS. Tech stack: —  Java, Spring Boot, AWS EC2, RDS | deployed AWS"
+        "Architected a multi-tenant SaaS platform with a 5-layer security stack: Nginx SSL termination, tenant resolution middleware, JWT authentication, API key authentication, and Spring Security CORS/roles. Tech stack: — Spring Boot, Nginx, JWT, MySQL, Docker",
+        "Built AWS SES multi-tenant email service with per-tenant sending identities, bounce and complaint handling via SNS, suppression lists, and scheduled nurture sequences. Tech stack: — Spring Boot, AWS SES, SNS, SQS",
+        "Developed a modular React single-page booking app integrating RESTful APIs, calendar availability, PDF/email confirmations, reCAPTCHA, and SEO using React Helmet. CI/CD pipeline for deployment on AWS & shared hosting. Tech stack: — React SPA + PHP API, PHPMailer, Google Calendar API",
+        "Built a studio management SPA with scheduling, rentals, PDF invoices, and calendar views using Angular 18 standalone components and reactive forms. Tech stack: — Angular 17, FullCalendar, html2pdf, localStorage",
+        "Developed a microservice-based chatbot API for fortune prompt and custom prompt workflows. Integrated API with scalable deployment. Tech stack: — Spring Boot, OpenAI GPT, AWS EC2",
+        "Created a mock sales data generation tool for a dashboard simulating photography trends. Tech stack: — Python, Flask, Drupal, Drupal Cron, PHP",
+        "Migrated and consolidated legacy booking systems into a unified API platform with REST endpoints and cloud deployment. Tech stack: — Java, Spring Boot, AWS EC2, RDS"
       ]
     },
     {
