@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow:
 
-Sitemap: https://cryshansen.github.io/sitemap.xml
+Sitemap: https://crystalhansen.ca/sitemap.xml
