@@ -213,7 +213,7 @@ Using `[var_name]` (square brackets) instead of `{{ var }}` or `${var}` keeps te
 | `[booking_date]`  | Tuesday, May 13 |
 | `[booking_time]`  | 2:00 PM         |
 | `[business_name]` | Their Ma Studio |
-| `[reset_link]`    | https://...     |
+| `[reset_link]`    | `https://...`   |
 
 ---
 
