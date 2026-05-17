@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-layer-5-spring-security-role-based-authorization-and-cors",
+        },{id: "post-running-maven-builds-from-testing-to-ec2-deployment",
+        
+          title: "Running Maven Builds: From Testing to EC2 Deployment",
+        
+        description: "A practical guide to running mvn test, packaging your Java app, and deploying it to AWS EC2 — including CI/CD with GitHub Actions and running as a systemd service.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/mvn-build-test-deploy-ec2/";
+          
+        },
+      },{id: "post-layer-5-spring-security-role-based-authorization-and-cors",
         
           title: "Layer 5 — Spring Security: Role-Based Authorization and CORS",
         
