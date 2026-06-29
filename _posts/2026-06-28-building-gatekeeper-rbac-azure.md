@@ -112,3 +112,5 @@ The production API is actively running on Azure. You can execute requests direct
 * **Test the restriction (GET):** `https://gatekeeperauth-gsevezf3d8awc8fj.centralus-01.azurewebsites.net/api/secure/dashboard`
 
 > 💡 **Quick Test:** Fire a POST request to `/api/auth/login` using the email `admin@dev.ca` and password `Password123` to watch the Azure server dynamically append the `Admin` claim and drop your encrypted session cookie live!
+
+Next Steps: Add a Front End in Azure Static Web Apps to create a full-stack architecture. 
