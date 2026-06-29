@@ -10,8 +10,8 @@ related_posts: false
 
 # How to restrict Multi-Tenant Bookings + Google Accounts
 
-
 This article is the second in a three-part series on building architectural booking syncs:
+
 1. [Part 1: Google Cloud Infrastructure & OAuth Configuration]({% post_url 2026-05-23-setting-up-google-calendar-api-oauth2-for-multi-tenant booking-engines %})
 2. **Part 2: Managing Tenant Isolation & Shared Team Calendars** (This Post)
 3. [Part 3: Bidirectional Client Syncing with FullCalendar & Java] ({% post_url 2026-05-25-google-calendar-and full-calendar-bidirection %})
@@ -19,6 +19,7 @@ This article is the second in a three-part series on building architectural book
 When building a multi-tenant booking engine that integrates with Google Calendar, a common challenge is ensuring that each tenant's bookings are properly isolated while allowing them to connect their Google accounts for calendar syncing. In this article, we will explore how to restrict multi-tenant bookings and manage Google account connections effectively in a Java backend architecture.
 
 ## The Challenge of Multi-Tenancy and Google Accounts
+
 In a multi-tenant booking engine where the need to connect Google accounts to a pre-existing tenancy, you need to separate application tenants from Google accounts. Building from the previous post ()[2026-05-23-setting-up-google-calendar-api-oauth2-for-multi-tenant booking-engines]
 
 In this scenario, you don't restrict Google's permissions directly via OAuth scopes (since Google has no concept of your application's database boundaries). Instead, you enforce tenant isolation and calendar consistency programmatically inside your Java backend database schema and logic.
@@ -26,28 +27,29 @@ In this scenario, you don't restrict Google's permissions directly via OAuth sco
 Here is the exact architecture, database design, and code pattern to achieve this workflow smoothly.
 
 ## 1. The Multi-Tenant Calendar Schema
+
 To allow an Admin to authorize a single Google account for the entire workspace while ensuring team members are synced to the exact same calendar name, your database needs to map tenant_id to its respective Google OAuth credentials and a unique google_calendar_id.
 
-  +------------------+         1 : 1         +--------------------------+
-  |  tenants         | --------------------> |  tenant_google_configs   |
-  +------------------+                       +--------------------------+
-  | * tenant_id (PK) |                       | * tenant_id (FK, PK)     |
-  | - company_name   |                       | - encrypted_refresh_token|
-  |                  |                       | - google_email           |
-  |                  |                       | - target_calendar_id     |
-  +------------------+                       +--------------------------+
-           |                                               |
-           | 1 : N                                         | 1 : 1 (Contextual)
-           v                                               v
-  +------------------+                       +--------------------------+
-  |  users / team    |                       |  Google Workspace        |
-  +------------------+                       +--------------------------+
-  | * user_id (PK)   |                       | - "Company Schedule"     |
-  | - tenant_id (FK) |                       |   (Shared Calendar ID)   |
-  | - email          |                       +--------------------------+
++------------------+ 1 : 1 +--------------------------+
+| tenants | --------------------> | tenant*google_configs |
++------------------+ +--------------------------+
+| * tenant*id (PK) | | * tenant_id (FK, PK) |
+| - company_name | | - encrypted_refresh_token|
+| | | - google_email |
+| | | - target_calendar_id |
++------------------+ +--------------------------+
+| |
+| 1 : N | 1 : 1 (Contextual)
+v v
++------------------+ +--------------------------+
+| users / team | | Google Workspace |
++------------------+ +--------------------------+
+| \* user_id (PK) | | - "Company Schedule" |
+| - tenant_id (FK) | | (Shared Calendar ID) |
+| - email | +--------------------------+
 Your data table layout should look like this:
 
-``` SQL
+```SQL
 CREATE TABLE tenant_google_configs (
     tenant_id VARCHAR(255) PRIMARY KEY,
     google_email VARCHAR(255) NOT NULL,
@@ -58,13 +60,16 @@ CREATE TABLE tenant_google_configs (
 ```
 
 ## 2. Step-by-Step Implementation Flow
+
 ### Step 1: Admin Authorizes the App
+
 When the Admin connects their Google Account, they go through the standard OAuth loop. Your Java backend intercepts the callback, receives the refresh_token, and stores it under that specific tenant_id.
 
 ### Step 2: Programmatically Create the "Named" Calendar
+
 Instead of pushing bookings to the Admin’s raw primary calendar (which would mix personal and business data), your Java backend uses the Admin's token to create a secondary calendar with your standardized application name.
 
-``` Java
+```Java
 import com.google.api.services.calendar.Calendar;
 import com.google.api.services.calendar.model.Calendar;
 
@@ -72,14 +77,14 @@ public class GoogleCalendarProvisioner {
 
     public String provisionSharedTenantCalendar(Calendar googleCalendarService, String companyName) throws IOException {
         // 1. Define the uniform calendar layout
-        com.google.api.services.calendar.model.Calendar secondaryCalendar = 
+        com.google.api.services.calendar.model.Calendar secondaryCalendar =
             new com.google.api.services.calendar.model.Calendar();
-        
+
         secondaryCalendar.setSummary(companyName + " Bookings");
         secondaryCalendar.setTimeZone("America/New_York"); // Adjust contextually
 
         // 2. Execute creation on Google's Infrastructure
-        com.google.api.services.calendar.model.Calendar createdCalendar = 
+        com.google.api.services.calendar.model.Calendar createdCalendar =
             googleCalendarService.calendars().insert(secondaryCalendar).execute();
 
         // 3. Return the generated ID (looks like: c_xxxxxxxxx@group.calendar.google.com)
@@ -91,6 +96,7 @@ public class GoogleCalendarProvisioner {
 You save this returned target_calendar_id directly into your tenant_google_configs table.
 
 ### Step 3: Pushing Bookings for Team Members
+
 When a customer schedules an appointment with Team Member B, Team Member B does not need to connect their personal Google account.
 
 Your Java scheduling service looks up the workspace context:
@@ -106,9 +112,10 @@ Your Java scheduling service looks up the workspace context:
 Because it is targeted directly to the saved target_calendar_id, the booking automatically routes straight into the corporate calendar the Admin established.
 
 ## 3. Restricting Scopes Safely for this Model
+
 Because you are creating and managing a custom secondary calendar on behalf of the business workspace, you can safely use the broader event scope discussed previously:
 
-``` Plaintext
+```Plaintext
 https://www.googleapis.com/auth/calendar.events
 
 ```

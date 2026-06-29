@@ -265,7 +265,7 @@ jekyll-archives:
   books:
     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
 
-display_tags: ["react", "angular", "spring-boot", "devops", "authentication", "docker", "security", "git", "saas", "automation"] # these tags will be displayed on the front page of your blog
+display_tags: ["react", "angular", "spring-boot", "devops", "authentication", "docker", "security", "git", "saas", "automation", "csharp", "dotnet"] # these tags will be displayed on the front page of your blog
 display_categories: ["react-posts", "angular-posts", "devops-posts", "engineering", "architecture", "AI"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------

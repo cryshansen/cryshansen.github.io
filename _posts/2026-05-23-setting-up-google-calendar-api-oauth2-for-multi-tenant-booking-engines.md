@@ -9,9 +9,11 @@ related_posts: false
 ---
 
 # Setting Up Google Calendar API & OAuth 2.0 for Multi-Tenant Booking Engines
+
 This guide covers the end-to-end configuration within the Google Cloud Console, detailing how to establish scopes, structure redirect patterns, and configure things cleanly so your Java backend can securely obtain refresh tokens.
 
 This article is the first in a three-part series on building architectural booking syncs:
+
 1. **Part 1: Google Cloud Infrastructure & OAuth Configuration** (This Post)
 2. [Part 2: Managing Tenant Isolation & Shared Team Calendars]({% post_url 2026-05-24-multi-tenant-google-calendar-isolation %})
 3. [Part 3: Bidirectional Client Syncing with FullCalendar & Java]({% post_url 2026-05-25-bidirectional-fullcalendar-java-sync %})
@@ -26,29 +28,29 @@ This guide covers the end-to-end configuration within the Google Cloud Console, 
 
 Before clicking through consoles, let’s look at how the token exchange flow operates between your client frontend, your Java backend, and Google's authorization servers.
 
-+------------+          Authorization Request          +-----------------+
-|            | --------------------------------------> |                 |
-|            |                                         |  Google OAuth   |
-| End-User   | <-------------------------------------- |  Server         |
-| (Browser)  |        User Grants Consent              |                 |
-|            |                                         +-----------------+
-|            |                                                  |
-|            | ----------------------------\                    | Auth Code
-+------------+   Redirects with Auth Code   \                   v
++------------+ Authorization Request +-----------------+
+| | --------------------------------------> | |
+| | | Google OAuth |
+| End-User | <-------------------------------------- | Server |
+| (Browser) | User Grants Consent | |
+| | +-----------------+
+| | |
+| | ----------------------------\ | Auth Code
++------------+ Redirects with Auth Code \ v
 --------> +-----------------+
-|                 |
-|  Java Backend   |
-|  (Spring Boot)  |
-|                 |
+| |
+| Java Backend |
+| (Spring Boot) |
+| |
 +-----------------+
 |
-Exchange Code           |
-& Client Secret         v
+Exchange Code |
+& Client Secret v
 +-----------------+
-|                 |
-|  Google Token   |
-|  Server         |
-|                 |
+| |
+| Google Token |
+| Server |
+| |
 +-----------------+
 
 ---
@@ -58,6 +60,7 @@ Exchange Code           |
 To start interacting with Google Workspace APIs, you need an active Google Cloud Platform (GCP) project.
 
 ### Step 1: Enable the Calendar API
+
 1. Open the [Google Cloud Console](https://console.cloud.google.com/).
 2. Create a new project or select an existing one from the top project dropdown.
 3. In the left navigation sidebar, navigate to **APIs & Services** > **Library**.
@@ -71,17 +74,19 @@ To start interacting with Google Workspace APIs, you need an active Google Cloud
 Google requires an explicit consent screen setup before you can issue OAuth client credentials. This screen defines what the user sees when your application requests access to their account.
 
 ### Step 1: App Branding & Audience
+
 1. Navigate to **APIs & Services** > **OAuth consent screen** (or **Google Auth platform** > **Branding** in newer console interfaces).
 2. Choose your **User Type**:
-   * **Internal:** Restricts access strictly to users within your own Google Workspace organization.
-   * **External:** Essential if your multi-tenant app handles external clients, contractors, or independent practitioners.
+   - **Internal:** Restricts access strictly to users within your own Google Workspace organization.
+   - **External:** Essential if your multi-tenant app handles external clients, contractors, or independent practitioners.
 3. Click **Create**.
 4. Fill in the required **App information**:
-   * **App name:** The name displayed to users during authorization.
-   * **User support email:** For user inquiries regarding consent.
-   * **Developer contact information:** Emails for Google system alerts.
+   - **App name:** The name displayed to users during authorization.
+   - **User support email:** For user inquiries regarding consent.
+   - **Developer contact information:** Emails for Google system alerts.
 
 ### Step 2: Define Data Access Scopes
+
 Scopes define the specific permissions your application is requesting. For a deep calendar booking integration, avoid requesting broad read/write access to the user's entire drive or profile if you don't need it.
 
 1. In the **Data Access** / **Scopes** section, click **Add or Remove Scopes**.
@@ -93,7 +98,9 @@ Scopes define the specific permissions your application is requesting. For a dee
 ```
 
 ⚠️ Scope Granularity: The .../auth/calendar.events scope allows your app to read and write events on the user's calendars. If your backend only needs to create and modify bookings but shouldn't manage secondary calendars or change global calendar settings, this is preferred over the wider .../auth/calendar scope.Step 3: Add Test UsersIf your publishing status is set to Testing (unverified), Google blocks access to all accounts except those explicitly whitelisted here.Under Audience > Test users, click Add Users.Enter the Gmail or Google Workspace email addresses you plan to use for local development and testing.
+
 ## 4. Creating OAuth 2.0 Web Client Credentials
+
 With the consent screen established, you can now generate the credentials that identify your Java server application to Google.
 
 <div class="mb-5 position-relative">
@@ -138,37 +145,39 @@ With the consent screen established, you can now generate the credentials that i
   </div>
 </div>
 
-
 ---
 
 ## 5. Backend Parameters for Token Long-Term Retention
+
 When routing your user to Google's authorization endpoint from your Java application (or when constructing the authorization URL using tools like the google-api-client or Spring Security OAuth2), you must pass two specific parameters to guarantee a long-term architecture works.By default, Google only returns an access token that expires in one hour. To get a permanent key (a refresh token) to update calendars while the user is offline, construct your request parameters like this:
 
-Parameter Key   Required Value  Purpose
-access_typeoffline  Explicitly tells Google your backend needs to execute tasks when the user is not actively interacting with the browser. Crucial for receiving a refresh token.
+Parameter Key Required Value Purpose
+access_typeoffline Explicitly tells Google your backend needs to execute tasks when the user is not actively interacting with the browser. Crucial for receiving a refresh token.
 
-prompt  consent Forces the consent screen to show up again even if the user has already approved your application. Google only sends the refresh_token on the very first authorization unless this parameter forces it.
+prompt consent Forces the consent screen to show up again even if the user has already approved your application. Google only sends the refresh_token on the very first authorization unless this parameter forces it.
 
 ### Handling Token Expiry in Java
+
 Once your callback receives the auth_code, you post it back to Google's token endpoint to receive the token bundle. Store the resulting payload securely:
+
 1. Access Token: Valid for 3600 seconds. Keep this in a temporary short-lived cache or session context.
 2. Refresh Token: Valid indefinitely (unless revoked by the user). Store this encrypted in your database linked directly to your tenant's account ID.
 
 When your booking application fires an automated sync event and encounters a 401 Unauthorized response from the Google Calendar API, your Java error handler should intercept the exception, fetch the encrypted refresh_token, make an isolated token refresh request, update the tenant record, and retry the booking creation seamlessly.
 
-
 ## 6. Token Management Best Practices
+
 When building the data model on your Java backend, store the tokens securely.
 
     Force Offline Access: When routing your user to Google's authorization endpoint, pass the query parameter access_type=offline and prompt=consent. This forces Google to supply a refresh_token alongside the initial access_token.
 
-    Handle Token Expiry: Access tokens automatically expire after 3,600 seconds (1 hour). 
+    Handle Token Expiry: Access tokens automatically expire after 3,600 seconds (1 hour).
     Your Java backend should intercept 401 Unauthorized responses from the Calendar API, use the saved refresh_token to fetch a fresh access token from https://oauth2.googleapis.com/token, update the tenant's record, and retry the scheduling payload.
-
 
 ### Next Steps
 
-Now that your Google Cloud Platform project is successfully issuing credentials and securely passing back refresh tokens, you need to decide how those credentials map to your actual application data layer. 
+Now that your Google Cloud Platform project is successfully issuing credentials and securely passing back refresh tokens, you need to decide how those credentials map to your actual application data layer.
 
 ## Conclusion
+
 To see how to isolate these tokens inside a business ecosystem without forcing every single staff member to sign into Google, head over to **[Part 2: Managing Tenant Isolation & Shared Team Calendars]({% post_url 2026-05-24-multi-tenant-google-calendar-isolation %})**.

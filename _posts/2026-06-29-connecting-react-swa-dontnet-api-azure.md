@@ -2,8 +2,8 @@
 layout: post
 title: "Bridging the Gap: Connecting React (Azure SWA) to a Secured .NET 8 API"
 date: 2026-06-29
-tags: [architecture, fullstack, .net , azure, swa, api]
-categories: [devOps,.net]
+tags: [csharp, dotnet, azure, react, swa, architecture, cors]
+categories: [engineering, devops-posts]
 description: A architectural breakdown of resolving Cross-Origin (CORS) cookie authentication constraints between Azure Static Web Apps and Azure App Service.
 toc:
   beginning: true
@@ -11,9 +11,12 @@ mermaid:
   enabled: true
 ---
 
-Deploying a modern full-stack web application into production requires a clean separation of concerns. In our previous post, we hardened a .NET 8 Minimal API backend using Role-Based Access Control (RBAC). 
+Deploying a modern full-stack web application into production requires a clean separation of concerns. In [Part 1]({% post_url 2026-06-28-building-gatekeeper-rbac-azure %}), we hardened a .NET 8 Minimal API backend using Role-Based Access Control (RBAC) and deployed it to Azure App Service via GitHub Actions.
 
 Today, we take the architecture full-stack by introducing a highly responsive React user interface styled with Material-UI, hosted globally via **Azure Static Web Apps (SWA)**, and bound directly to our live Azure cloud engine.
+
+> **This is Part 2 of a two-part series.**
+> Start with Part 1 — [Hardening .NET Minimal APIs: Shifting from Local Dev to Azure-backed RBAC]({% post_url 2026-06-28-building-gatekeeper-rbac-azure %}) — to follow the backend setup from scratch.
 
 ---
 
@@ -51,9 +54,11 @@ graph LR
     style A fill:#61dafb,stroke:#333,stroke-width:2px,color:#000
     style B fill:#512bd4,stroke:#333,stroke-width:2px,color:#fff
 ```
+
 ---
 
 ## The Cross-Domain Cookie Challenge
+
 Because our frontend and backend run on distinct Azure service structures, they communicate across entirely separate domains. By default, standard security contexts block authentication tokens from tracking across unmapped endpoints.
 
 To overcome this without resorting to unsecure local storage tokens, we shifted our .NET architecture to enforce explicit trust guidelines:
@@ -63,9 +68,9 @@ SameSiteMode.None + forced SSL to permit cross-domain browser cookie persistence
 AllowCredentials() within CORS to authorize Axios asynchronous calls to inherit background session authorization rules natively.
 
 - 1. Updating the .NET Security Gates
-To safely handshake with our remote React build, we modified Program.cs to handle incoming cross-origin headers gracefully:
+     To safely handshake with our remote React build, we modified Program.cs to handle incoming cross-origin headers gracefully:
 
-``` C#
+```C#
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("ReactAppPolicy", policy =>
@@ -81,18 +86,18 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     .AddCookie(options =>
     {
         options.Cookie.Name = "GatekeeperSession";
-        options.Cookie.HttpOnly = true; 
+        options.Cookie.HttpOnly = true;
         options.Cookie.SameSite = SameSiteMode.None; // Required for cross-domain
         options.Cookie.SecurePolicy = CookieSecurePolicy.Always; // Required for SameSite=None
     });
 ```
 
 - 2. Injecting Compilation Variables via GitHub Actions
-Because static web environments compile application scripts completely down to minimized browser assets prior to runtime distribution, standard server-side configuration mapping is unreachable. Instead, we injected our backend variables directly into our delivery pipelines via encrypted GitHub Repository Secrets.
+     Because static web environments compile application scripts completely down to minimized browser assets prior to runtime distribution, standard server-side configuration mapping is unreachable. Instead, we injected our backend variables directly into our delivery pipelines via encrypted GitHub Repository Secrets.
 
 Our automated workflow file (.github/workflows/azure-static-web-apps.yml) intercepts these fields smoothly during build execution:
 
-``` YAML
+```YAML
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
@@ -101,13 +106,14 @@ Our automated workflow file (.github/workflows/azure-static-web-apps.yml) interc
           action: "upload"
           app_location: "/"
           output_location: "build"
-        env: 
+        env:
           REACT_APP_API_BASE: ${{ secrets.REACT_APP_API_BASE }}
 ```
 
 Now, when our Axios wrapper calls process.env.REACT_APP_API_BASE, it hooks directly into our cloud architecture instantly.
 
 ## Key Takeaways
+
 By isolating our stateless UI layers from our analytical engines, we achieve:
 
 - Near-Zero Hosting Costs: Running client distributions globally over free CDN edges.
@@ -115,3 +121,11 @@ By isolating our stateless UI layers from our analytical engines, we achieve:
 - Hardened Security: Retaining stateful cookie boundaries while preventing manual script intervention or security leaks.
 
 - Continuous Delivery: Automated pipeline testing maps, builds, and distributes downstream adjustments every single time code drops onto a tracked repository.
+
+---
+
+## The Full Series
+
+> **Part 1:** [Hardening .NET Minimal APIs: Shifting from Local Dev to Azure-backed RBAC]({% post_url 2026-06-28-building-gatekeeper-rbac-azure %}) — RBAC middleware, cookie auth, and GitHub Actions deployment to Azure App Service.
+>
+> **Part 2:** You are here — React on Azure SWA, CORS configuration, and cross-domain cookie authentication.

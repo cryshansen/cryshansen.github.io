@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Running Maven Builds: From Testing to EC2 Deployment"
-date: 2026-05-17 
+date: 2026-05-17
 description: "A practical guide to running mvn test, packaging your Java app, and deploying it to AWS EC2 — including CI/CD with GitHub Actions and running as a systemd service."
 tags: [maven, java, aws, ec2, devops, ci-cd]
 categories: [devops]
@@ -75,7 +75,7 @@ This runs both unit tests (`*Test.java`) and integration tests (`*IT.java`) in s
 mvn package -DskipTests
 ```
 
-> **Note:** `-DskipTests` skips test *execution* but still compiles test classes. Use `-Dmaven.test.skip=true` to skip compilation too.
+> **Note:** `-DskipTests` skips test _execution_ but still compiles test classes. Use `-Dmaven.test.skip=true` to skip compilation too.
 
 ---
 
@@ -224,8 +224,8 @@ jobs:
       - name: Set up Java
         uses: actions/setup-java@v3
         with:
-          java-version: '17'
-          distribution: 'temurin'
+          java-version: "17"
+          distribution: "temurin"
 
       - name: Run tests
         run: mvn test
@@ -307,16 +307,16 @@ sudo systemctl restart myapp
 
 ## Quick Reference
 
-| Goal | Command |
-| :--- | :--- |
-| Run all tests | `mvn test` |
-| Run integration tests | `mvn verify` |
-| Run a single test | `mvn test -Dtest=MyTest` |
-| Build (skip tests) | `mvn clean package -DskipTests` |
-| Build for prod profile | `mvn clean package -Pprod` |
-| Copy JAR to EC2 | `scp -i key.pem target/app.jar ec2-user@HOST:/path/` |
-| SSH to EC2 | `ssh -i key.pem ec2-user@HOST` |
-| Restart systemd service | `sudo systemctl restart myapp` |
+| Goal                    | Command                                              |
+| :---------------------- | :--------------------------------------------------- |
+| Run all tests           | `mvn test`                                           |
+| Run integration tests   | `mvn verify`                                         |
+| Run a single test       | `mvn test -Dtest=MyTest`                             |
+| Build (skip tests)      | `mvn clean package -DskipTests`                      |
+| Build for prod profile  | `mvn clean package -Pprod`                           |
+| Copy JAR to EC2         | `scp -i key.pem target/app.jar ec2-user@HOST:/path/` |
+| SSH to EC2              | `ssh -i key.pem ec2-user@HOST`                       |
+| Restart systemd service | `sudo systemctl restart myapp`                       |
 
 ---
 

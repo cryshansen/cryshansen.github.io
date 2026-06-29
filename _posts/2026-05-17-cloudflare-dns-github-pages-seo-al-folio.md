@@ -47,20 +47,20 @@ Once your domain is active in Cloudflare, navigate to **DNS → Records** and ad
 
 Add four A records pointing your root domain (`@`) to GitHub Pages' IP addresses:
 
-| Type | Name | Content | Proxy Status |
-| :--- | :--- | :--- | :--- |
-| A | `@` | `185.199.108.153` | DNS only |
-| A | `@` | `185.199.109.153` | DNS only |
-| A | `@` | `185.199.110.153` | DNS only |
-| A | `@` | `185.199.111.153` | DNS only |
+| Type | Name | Content           | Proxy Status |
+| :--- | :--- | :---------------- | :----------- |
+| A    | `@`  | `185.199.108.153` | DNS only     |
+| A    | `@`  | `185.199.109.153` | DNS only     |
+| A    | `@`  | `185.199.110.153` | DNS only     |
+| A    | `@`  | `185.199.111.153` | DNS only     |
 
 > **Important:** Set Proxy Status to **DNS only** (grey cloud), not Proxied (orange cloud). If you proxy through Cloudflare, GitHub Pages cannot provision a Let's Encrypt SSL certificate for your domain, which you need for the enforced HTTPS option.
 
 #### CNAME Record (www subdomain)
 
-| Type | Name | Content | Proxy Status |
-| :--- | :--- | :--- | :--- |
-| CNAME | `www` | `username.github.io` | DNS only |
+| Type  | Name  | Content              | Proxy Status |
+| :---- | :---- | :------------------- | :----------- |
+| CNAME | `www` | `username.github.io` | DNS only     |
 
 This lets `www.yourname.com` resolve to your site. Replace `username` with your actual GitHub username.
 
@@ -68,12 +68,12 @@ This lets `www.yourname.com` resolve to your site. Replace `username` with your 
 
 GitHub Pages also supports IPv6. Adding these is good practice:
 
-| Type | Name | Content | Proxy Status |
-| :--- | :--- | :--- | :--- |
-| AAAA | `@` | `2606:50c0:8000::153` | DNS only |
-| AAAA | `@` | `2606:50c0:8001::153` | DNS only |
-| AAAA | `@` | `2606:50c0:8002::153` | DNS only |
-| AAAA | `@` | `2606:50c0:8003::153` | DNS only |
+| Type | Name | Content               | Proxy Status |
+| :--- | :--- | :-------------------- | :----------- |
+| AAAA | `@`  | `2606:50c0:8000::153` | DNS only     |
+| AAAA | `@`  | `2606:50c0:8001::153` | DNS only     |
+| AAAA | `@`  | `2606:50c0:8002::153` | DNS only     |
+| AAAA | `@`  | `2606:50c0:8003::153` | DNS only     |
 
 ---
 
@@ -109,8 +109,8 @@ dig www.yourname.com +noall +answer -t CNAME
 Open `_config.yml` in your al-folio repo and update the `url` field:
 
 ```yaml
-url: https://yourname.com  # your custom domain, NOT username.github.io
-baseurl: ""                 # leave empty for apex domains
+url: https://yourname.com # your custom domain, NOT username.github.io
+baseurl: "" # leave empty for apex domains
 ```
 
 This is important — al-folio uses `url` and `baseurl` to generate canonical URLs, Open Graph tags, and the sitemap. If these are wrong, your SEO metadata will point to the wrong domain.
@@ -136,23 +136,23 @@ Here are the key fields to fill in:
 
 ```yaml
 # Site identity
-title:        Your Name
-first_name:   First
-last_name:    Last
-email:        you@yourname.com
+title: Your Name
+first_name: First
+last_name: Last
+email: you@yourname.com
 description: >
   Academic researcher and engineer. Writing about systems,
   machine learning, and the occasional DevOps rabbit hole.
 
 # URL — must be your custom domain once Cloudflare is set up
-url:          https://yourname.com
-baseurl:      ""
+url: https://yourname.com
+baseurl: ""
 
 # Keywords used in <meta name="keywords">
-keywords:     jekyll, academic, portfolio, machine-learning
+keywords: jekyll, academic, portfolio, machine-learning
 
 # Language
-lang:         en
+lang: en
 
 # Social — used in SEO tags and footer
 social:
@@ -163,7 +163,7 @@ social:
     - https://linkedin.com/in/yourprofile
 
 # Google Analytics (optional but useful for tracking search performance)
-google_analytics: G-XXXXXXXXXX  # your Measurement ID
+google_analytics: G-XXXXXXXXXX # your Measurement ID
 
 # Google Search Console verification
 google_site_verification: your-verification-token
@@ -180,14 +180,14 @@ For each blog post, these front matter fields directly influence how the page is
 ```yaml
 ---
 layout: post
-title: "Your Post Title"          # <title> tag and og:title
+title: "Your Post Title" # <title> tag and og:title
 date: 2026-05-17
 description: "A concise summary of what this post covers. Aim for
-              150–160 characters — this is what appears in Google's
-              search result snippets."
+  150–160 characters — this is what appears in Google's
+  search result snippets."
 tags: [tag1, tag2, tag3]
 categories: [category]
-og_image: /assets/img/posts/your-preview-image.jpg  # og:image for link previews
+og_image: /assets/img/posts/your-preview-image.jpg # og:image for link previews
 ---
 ```
 
@@ -244,18 +244,18 @@ Al-folio doesn't output rich structured data by default beyond what `jekyll-seo-
 
 ```html
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "{{ page.title }}",
-  "datePublished": "{{ page.date | date_to_xmlschema }}",
-  "description": "{{ page.description }}",
-  "url": "{{ page.url | absolute_url }}",
-  "author": {
-    "@type": "Person",
-    "name": "{{ site.first_name }} {{ site.last_name }}"
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "{{ page.title }}",
+    "datePublished": "{{ page.date | date_to_xmlschema }}",
+    "description": "{{ page.description }}",
+    "url": "{{ page.url | absolute_url }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ site.first_name }} {{ site.last_name }}"
+    }
   }
-}
 </script>
 ```
 
@@ -263,17 +263,17 @@ Al-folio doesn't output rich structured data by default beyond what `jekyll-seo-
 
 ## Quick Reference
 
-| Task | Where |
-| :--- | :--- |
-| Add A records for apex domain | Cloudflare DNS → Records |
-| Add CNAME for `www` | Cloudflare DNS → Records |
-| Set Proxy Status | DNS only (grey cloud) for all GitHub Pages records |
-| Set custom domain | GitHub repo → Settings → Pages |
-| Update `url` field | `_config.yml` |
-| Set site description & keywords | `_config.yml` |
-| Enable Google Search Console | `google_site_verification` in `_config.yml` |
-| Submit sitemap | Google Search Console → Sitemaps |
-| Per-post SEO | `description` and `og_image` in post front matter |
+| Task                            | Where                                              |
+| :------------------------------ | :------------------------------------------------- |
+| Add A records for apex domain   | Cloudflare DNS → Records                           |
+| Add CNAME for `www`             | Cloudflare DNS → Records                           |
+| Set Proxy Status                | DNS only (grey cloud) for all GitHub Pages records |
+| Set custom domain               | GitHub repo → Settings → Pages                     |
+| Update `url` field              | `_config.yml`                                      |
+| Set site description & keywords | `_config.yml`                                      |
+| Enable Google Search Console    | `google_site_verification` in `_config.yml`        |
+| Submit sitemap                  | Google Search Console → Sitemaps                   |
+| Per-post SEO                    | `description` and `og_image` in post front matter  |
 
 ---
 
