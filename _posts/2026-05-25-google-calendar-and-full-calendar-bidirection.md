@@ -12,7 +12,7 @@ related_posts: false
 
 This article is the third in a three-part series on building architectural booking syncs:
 
-1. [Part 1: Google Cloud Infrastructure & OAuth Configuration]({% post_url 2026-05-23-setting-up-google-calendar-api-oauth2-for-multi-tenant booking-engines %})
+1. [Part 1: Google Cloud Infrastructure & OAuth Configuration]({% post_url 2026-05-23-setting-up-google-calendar-api-oauth2-for-multi-tenant-booking-engines %})
 2. [Part 2: Managing Tenant Isolation & Shared Team Calendars]({% post_url 2026-05-24-restrict-multi-tenant-bookings-and-google-accounts %})
 3. [Part 3: Bidirectional Client Syncing with FullCalendar & Java] (This Post)
 

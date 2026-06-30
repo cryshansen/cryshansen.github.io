@@ -12,15 +12,15 @@ related_posts: false
 
 This article is the second in a three-part series on building architectural booking syncs:
 
-1. [Part 1: Google Cloud Infrastructure & OAuth Configuration]({% post_url 2026-05-23-setting-up-google-calendar-api-oauth2-for-multi-tenant booking-engines %})
+1. [Part 1: Google Cloud Infrastructure & OAuth Configuration]({% post_url 2026-05-23-setting-up-google-calendar-api-oauth2-for-multi-tenant-booking-engines %})
 2. **Part 2: Managing Tenant Isolation & Shared Team Calendars** (This Post)
-3. [Part 3: Bidirectional Client Syncing with FullCalendar & Java] ({% post_url 2026-05-25-google-calendar-and full-calendar-bidirection %})
+3. [Part 3: Bidirectional Client Syncing with FullCalendar & Java] ({% post_url 2026-05-25-google-calendar-and-full-calendar-bidirection %})
 
 When building a multi-tenant booking engine that integrates with Google Calendar, a common challenge is ensuring that each tenant's bookings are properly isolated while allowing them to connect their Google accounts for calendar syncing. In this article, we will explore how to restrict multi-tenant bookings and manage Google account connections effectively in a Java backend architecture.
 
 ## The Challenge of Multi-Tenancy and Google Accounts
 
-In a multi-tenant booking engine where the need to connect Google accounts to a pre-existing tenancy, you need to separate application tenants from Google accounts. Building from the previous post ()[2026-05-23-setting-up-google-calendar-api-oauth2-for-multi-tenant booking-engines]
+In a multi-tenant booking engine where the need to connect Google accounts to a pre-existing tenancy, you need to separate application tenants from Google accounts. Building from the previous post ()[2026-05-23-setting-up-google-calendar-api-oauth2-for-multi-tenant-booking-engines]
 
 In this scenario, you don't restrict Google's permissions directly via OAuth scopes (since Google has no concept of your application's database boundaries). Instead, you enforce tenant isolation and calendar consistency programmatically inside your Java backend database schema and logic.
 

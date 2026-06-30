@@ -15,8 +15,8 @@ This guide covers the end-to-end configuration within the Google Cloud Console, 
 This article is the first in a three-part series on building architectural booking syncs:
 
 1. **Part 1: Google Cloud Infrastructure & OAuth Configuration** (This Post)
-2. [Part 2: Managing Tenant Isolation & Shared Team Calendars]({% post_url 2026-05-24-multi-tenant-google-calendar-isolation %})
-3. [Part 3: Bidirectional Client Syncing with FullCalendar & Java]({% post_url 2026-05-25-bidirectional-fullcalendar-java-sync %})
+2. [Part 2: Managing Tenant Isolation & Shared Team Calendars]({% post_url 2026-05-24-restrict-multi-tenant-bookings-and-google-accounts %})
+3. [Part 3: Bidirectional Client Syncing with FullCalendar & Java]({% post_url 2026-05-25-google-calendar-and-full-calendar-bidirection %})
 
 When building a multi-tenant booking or scheduling engine, syncing appointments directly to a provider's personal calendar is a core requirement. Relying on simple service accounts won't cut it here—service accounts are designed for accessing resources owned by your application, not your end-users. For private data, you need explicit user delegation via **OAuth 2.0**.
 
@@ -180,4 +180,4 @@ Now that your Google Cloud Platform project is successfully issuing credentials 
 
 ## Conclusion
 
-To see how to isolate these tokens inside a business ecosystem without forcing every single staff member to sign into Google, head over to **[Part 2: Managing Tenant Isolation & Shared Team Calendars]({% post_url 2026-05-24-multi-tenant-google-calendar-isolation %})**.
+To see how to isolate these tokens inside a business ecosystem without forcing every single staff member to sign into Google, head over to **[Part 2: Managing Tenant Isolation & Shared Team Calendars]({% post_url 2026-05-24-restrict-multi-tenant-bookings-and-google-accounts %})**.
