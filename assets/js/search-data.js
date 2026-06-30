@@ -37,7 +37,62 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-running-maven-builds-from-testing-to-ec2-deployment",
+        },{id: "post-bridging-the-gap-connecting-react-azure-swa-to-a-secured-net-8-api",
+        
+          title: "Bridging the Gap: Connecting React (Azure SWA) to a Secured .NET 8 API...",
+        
+        description: "A architectural breakdown of resolving Cross-Origin (CORS) cookie authentication constraints between Azure Static Web Apps and Azure App Service.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/connecting-react-swa-dontnet-api-azure/";
+          
+        },
+      },{id: "post-hardening-net-minimal-apis-shifting-from-local-dev-to-azure-backed-rbac",
+        
+          title: "Hardening .NET Minimal APIs: Shifting from Local Dev to Azure-backed RBAC",
+        
+        description: "A practical deep-dive into configuring Role-Based Access Control (RBAC) in .NET 8 Minimal APIs and automating production cloud deployments via GitHub Actions.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/building-gatekeeper-rbac-azure/";
+          
+        },
+      },{id: "post-google-calendar-api-bidirectionally-with-full-calendar-in-a-multi-tenant-booking-engines",
+        
+          title: "Google Calendar API Bidirectionally with Full Calendar in a Multi-Tenant Booking Engines",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/google-calendar-and-full-calendar-bidirection/";
+          
+        },
+      },{id: "post-how-to-restrict-multi-tenant-bookings-google-accounts-separation",
+        
+          title: "How to restrict Multi-Tenant Bookings + Google Accounts Separation",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/restrict-multi-tenant-bookings-and-google-accounts/";
+          
+        },
+      },{id: "post-setting-up-google-calendar-api-amp-oauth-2-0-for-multi-tenant-booking-engines",
+        
+          title: "Setting Up Google Calendar API &amp; OAuth 2.0 for Multi-Tenant Booking Engines",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/setting-up-google-calendar-api-oauth2-for-multi-tenant-booking-engines/";
+          
+        },
+      },{id: "post-running-maven-builds-from-testing-to-ec2-deployment",
         
           title: "Running Maven Builds: From Testing to EC2 Deployment",
         
@@ -46,6 +101,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2026/mvn-build-test-deploy-ec2/";
+          
+        },
+      },{id: "post-cloudflare-dns-github-pages-custom-domain-and-seo-for-your-al-folio-site",
+        
+          title: "Cloudflare DNS + GitHub Pages: Custom Domain and SEO for Your al-folio Site...",
+        
+        description: "Step-by-step guide to pointing a custom domain at your GitHub Pages site using Cloudflare DNS, and tuning your al-folio Jekyll theme for solid SEO.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/cloudflare-dns-github-pages-seo-al-folio/";
           
         },
       },{id: "post-layer-5-spring-security-role-based-authorization-and-cors",
