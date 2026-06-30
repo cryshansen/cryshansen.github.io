@@ -3,7 +3,7 @@ layout: post
 title: "Setting Up NVM on macOS (Node Version Manager)"
 date: 2026-01-03
 description: "A practical guide to installing and using NVM on macOS for managing multiple Node.js versions."
-categories: [javascript, node, tooling]
+categories: [javascript, node, tooling, devops-posts]
 tags: [nvm, nodejs, macos, dev-environment, devOps]
 ---
 

@@ -4,7 +4,7 @@ title: "Layer 1 — nginx as Your Security Perimeter: SSL Termination and Access
 date: 2026-05-12 09:00:00 -0500
 description: A deep dive into using nginx as the outermost security layer in a multi-tenant SaaS — covering TLS configuration, Let's Encrypt automation, access log design, and rate limiting.
 tags: [nginx, ssl, tls, security, devops, lets-encrypt]
-categories: architecture
+categories: [architecture, devops-posts]
 series: security-layers
 giscus_comments: true
 related_posts: true

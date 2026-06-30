@@ -4,7 +4,7 @@ title: Docker Cheatsheet for the Mindless
 date: 2026-03-19
 description: Docker cheat sheet for quick reference of common tasks.
 tags: [docker, restart, compose]
-categories: [docker]
+categories: [docker, devops-posts]
 giscus_comments: false
 related_posts: false
 related_publications: false

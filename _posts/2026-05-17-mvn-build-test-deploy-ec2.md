@@ -4,7 +4,7 @@ title: "Running Maven Builds: From Testing to EC2 Deployment"
 date: 2026-05-17
 description: "A practical guide to running mvn test, packaging your Java app, and deploying it to AWS EC2 — including CI/CD with GitHub Actions and running as a systemd service."
 tags: [maven, java, aws, ec2, devops, ci-cd]
-categories: [devops]
+categories: [devops, devops-posts]
 giscus_comments: true
 related_posts: false
 toc:

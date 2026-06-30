@@ -4,7 +4,7 @@ title: "Cloudflare DNS + GitHub Pages: Custom Domain and SEO for Your al-folio S
 date: 2026-05-17
 description: "Step-by-step guide to pointing a custom domain at your GitHub Pages site using Cloudflare DNS, and tuning your al-folio Jekyll theme for solid SEO."
 tags: [cloudflare, github-pages, dns, seo, al-folio, jekyll]
-categories: [devops]
+categories: [devops, devops-posts]
 giscus_comments: true
 related_posts: false
 toc:

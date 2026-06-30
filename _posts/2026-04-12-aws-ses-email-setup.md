@@ -13,6 +13,7 @@ tags:
 categories:
   - engineering
   - infrastructure
+  - devops-posts
 author: your_name
 og_image: /assets/img/blog/ses-overview.png
 related_posts: true
