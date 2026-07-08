@@ -32,10 +32,9 @@
       "location": "Remote",
       "summary": "Built and maintained client websites, applications, and internal tools independently. Specialized in full-stack development (Angular 17–19, React, Node.js, Java, Spring, PHP) with DevOps and CI/CD deployment experience. Integrated and developed complex systems including APIs for calendar booking, chatbot APIs, real-time availability, PDF generation, SEO, and e-commerce tools.",
       "highlights": [
-        "Client Project: Aura-Lee Massage Therapy - Regina, SK (React SPA + PHP API | Production | Paid Client Work) — Redeveloped basic site into a single-page booking app integrating RESTful APIs, calendar availability, PDF/email confirmations, reCAPTCHA, and SEO using React Helmet. CI/CD pipeline for deployment on AWS & shared hosting. Visit: auralee.ca",
-        "Fluxo App Platform (React, Spring Boot, Java APIs | Production v1) — Migrated and consolidated a legacy booking system into a modern multi-tenant SaaS platform with a Spring Boot 3 / Java backend (layered controller-service-repository-DTO architecture, PostgreSQL via Supabase/Railway) and a React + Vite frontend, deployed on AWS with nginx. Implemented JWT (HS256) session tokens in HttpOnly cookies, email OTP MFA, and Google/GitHub OAuth2 login. Visit: fluxo-app.ca",
-        "Principal Founder & Full-Stack Engineer — Independent Projects & Startup Prototypes (Ongoing). Technologies: Java (Spring Boot), C# (.NET Core / Framework), Python (FastAPI, Flask), React 19, TypeScript, OpenAI GPT, GCP, Terraform, Docker, Spring Security, MySQL",
-        "Architected Multi-Tenant SaaS Infrastructure: Designed and built a domain-isolated, high-availability backend (happy2be) utilizing Spring Boot and React 19; implemented tenant-aware Spring Security/JWT logic and automated SMTP routing to support independent, multi-domain branding (Unwynd vs. Happy2be) and strict user data isolation",
+        "Client Project: Aura-Lee Massage Therapy - Regina, SK (React SPA + PHP API | Production | Paid Client Work) — Redeveloped basic site into a single-page booking app integrating RESTful APIs, calendar availability, PDF/email confirmations, reCAPTCHA, and SEO using React Helmet. CI/CD pipeline for deployment on AWS & shared hosting. Visit: https://auralee.ca",
+        "Fluxo App Platform (React, Spring Boot, Java APIs | Production v1) — Migrated and consolidated a legacy booking system into a modern multi-tenant SaaS platform with a Spring Boot 3 / Java backend (layered controller-service-repository-DTO architecture, PostgreSQL via Supabase/Railway) and a React + Vite frontend, deployed on AWS with nginx. Implemented JWT (HS256) session tokens in HttpOnly cookies, email OTP MFA, and Google/GitHub OAuth2 login. Visit: https://fluxo-app.ca",
+        "Architected journalling Multi-Tenant SaaS Infrastructure: Designed and built a domain-isolated, high-availability backend (happy2be) utilizing Spring Boot and React 19; implemented tenant-aware Spring Security/JWT logic and automated SMTP routing to support independent, multi-domain branding (Unwynd vs. Happy2be) and strict user data isolation",
         "Automated Cloud Infrastructure & DevOps: Deployed resilient cloud environments on GCP using Terraform to manage VPCs, IAM, and Compute Engine instances; containerized multi-language microservices environments using Docker and Docker Compose. Deployed C# products to Azure cloud utilizing CI/CD via GitHub",
         "Engineered AI Workflows & Microservices: Developed custom, high-performance Python microservices (FastAPI/Flask) to handle binary sentiment analysis models and dynamic OpenAI GPT prompt engineering workflows, orchestrating seamless cross-system data parsing back to the core Java application",
         "Built Modular Frontend Systems: Designed and deployed a production-grade, reusable authentication module using React 19, TypeScript, and centralized Context state management; implemented strict route guarding, secure token-based payload handling, and custom form validation to eliminate UI rendering flashes"
@@ -253,20 +252,20 @@
   ],
   "references": [
     {
-      "name": "Jean Mahseredjian",
+      "name": "Jean M.",
       "icon": "fa-solid fa-laptop",
-      "reference": "President PGSTech, request contact info"
+      "reference": "Crystal is very professional often approaching problems with a unique blend of technical expertise and creative thinking. — Owner, PGSTech"
     },
     {
-      "name": "Henry Gras",
+      "name": "Henry G.",
       "icon": "fa-solid fa-laptop",
-      "reference": "COO, PGSTech,  request contact info "
+      "reference": "Crystal is an incredibly sharp developer who completely transformed our website with integrations to our Customer Relationship Management system. She has a rare knack for both deep backend logic and clean execution. — COO, PGSTech "
     }
   ],
   "projects": [
     {
       "name": "Fluxo App Platform",
-      "summary": "Modernized version of a 2019 booking system with full rebuild into a Spring Boot and Maven-based Java platform. Supports calendar slotting, back office booking management and an asynchronous Python microservice running in the cloud that interfaces directly with LLM APIs to handle automated data extraction, classification, and scoring workflows. Deployed to AWS EC2, AWS Lambda and Amplify.",
+      "summary": "Modernized version of a 2019 bookit booking system with full rebuild into a Spring Boot and Maven-based Java platform. Supports calendar slotting, back office booking management and an asynchronous Python microservice running in the cloud that interfaces directly with LLM APIs to handle automated data extraction, classification, and scoring workflows. Deployed to AWS EC2, AWS Lambda and Amplify.",
       "highlights": [
         "Java, Spring Boot, Spring MVC backend",
         "Refactored from Angular.js legacy code",
