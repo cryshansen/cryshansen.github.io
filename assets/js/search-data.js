@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-bridging-the-gap-connecting-react-azure-swa-to-a-secured-net-8-api",
+        },{id: "post-migrating-marketingpy-from-docker-compose-to-aws-lambda",
+        
+          title: "Migrating marketingPy from Docker Compose to AWS Lambda",
+        
+        description: "How a 4-container Docker Compose stack (FastAPI + APScheduler + arq worker + Redis) became three purpose-built Lambda functions behind API Gateway, SQS, and EventBridge Scheduler — and the trick for delayed, self-cleaning email drip schedules.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/migrating-marketingpy-to-aws-lambda/";
+          
+        },
+      },{id: "post-bridging-the-gap-connecting-react-azure-swa-to-a-secured-net-8-api",
         
           title: "Bridging the Gap: Connecting React (Azure SWA) to a Secured .NET 8 API...",
         
