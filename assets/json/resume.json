@@ -304,7 +304,13 @@
     {
       "name": "Happy2Be",
       "summary": "Java Spring Boot application focused on mood analysis and positive reinforcement through conversational prompts. Expands emotional intelligence in AI by analyzing sentiment polarity and providing feedback.",
-      "highlights": ["Java Spring Boot", "Sentiment Analysis", "Conversational Prompts", "Positive Reinforcement AI", "Python microservice for LLM API integration and data extraction"],
+      "highlights": [
+        "Java Spring Boot",
+        "Sentiment Analysis",
+        "Conversational Prompts",
+        "Positive Reinforcement AI",
+        "Python microservice for LLM API integration and data extraction"
+      ],
       "startDate": "2025-07-01",
       "endDate": "present",
       "url": ""
@@ -346,6 +352,5 @@
       "endDate": "present",
       "url": "https://github.com/cryshansen/flask-generate-sales"
     }
-    
   ]
 }

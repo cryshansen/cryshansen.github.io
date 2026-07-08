@@ -33,13 +33,13 @@ toc:
 
 The original stack was a `docker-compose.yml` with five services:
 
-| Service | Role |
-| --- | --- |
-| `marketing-api` | FastAPI app, plus an in-process APScheduler running four cron-style jobs |
-| `arq-worker` | Consumes an async task queue (publish jobs, trend processing, engagement checks) |
-| `redis` | Broker for `arq`, with `--appendonly yes` so queued jobs survived restarts |
-| `db` | MySQL 8 |
-| `lead-scorer` | A separate scoring microservice |
+| Service         | Role                                                                             |
+| --------------- | -------------------------------------------------------------------------------- |
+| `marketing-api` | FastAPI app, plus an in-process APScheduler running four cron-style jobs         |
+| `arq-worker`    | Consumes an async task queue (publish jobs, trend processing, engagement checks) |
+| `redis`         | Broker for `arq`, with `--appendonly yes` so queued jobs survived restarts       |
+| `db`            | MySQL 8                                                                          |
+| `lead-scorer`   | A separate scoring microservice                                                  |
 
 Everything ran on one `t3.medium` EC2 instance behind an ALB — the same shape covered in [Running Maven Builds: From Testing to EC2 Deployment]({% post_url 2026-05-17-mvn-build-test-deploy-ec2 %}), just for a Python service instead of Java. Documented cost for that box alone was roughly $40–80/month, running 24/7 regardless of load.
 
@@ -85,7 +85,7 @@ ApiFunction:
     ImageUri: !Ref EcrImageUri
     ImageConfig:
       Command: ["lambda_handler.api_handler"]
-    Timeout: 29          # API Gateway's hard cap is 30s
+    Timeout: 29 # API Gateway's hard cap is 30s
     ReservedConcurrentExecutions: 5
 
 SchedulerFunction:
