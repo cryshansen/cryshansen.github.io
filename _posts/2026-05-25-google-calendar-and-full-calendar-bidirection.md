@@ -3,7 +3,7 @@ layout: post
 title: "Google Calendar API Bidirectionally with Full Calendar in a Multi-Tenant Booking Engines"
 date: 2026-05-25
 categories: backend architecture
-tags: [google-api, oauth2, java, spring-boot, security]
+tags: [google-api, oauth2, java, spring-boot, security, multi-tenant]
 giscus_comments: true
 related_posts: false
 ---

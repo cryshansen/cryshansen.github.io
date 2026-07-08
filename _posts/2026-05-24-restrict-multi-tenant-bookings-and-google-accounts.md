@@ -3,7 +3,7 @@ layout: post
 title: "How to restrict Multi-Tenant Bookings + Google Accounts Separation"
 date: 2026-05-24
 categories: backend architecture
-tags: [google-api, oauth2, java, spring-boot, security]
+tags: [google-api, oauth2, java, spring-boot, security, multi-tenant]
 giscus_comments: true
 related_posts: false
 ---

@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Full-Stack Engineer &amp; Cloud Architect &middot; <a href='/blog/'>Read the Engineering Blog</a>
 
 profile:
   align: right
@@ -31,9 +31,11 @@ Crystal Hansen is a veteran full-stack software engineer and principal founder w
 
 Her career is anchored by an intensive, eight-year tenure (2011–2019) in the enterprise financial domain at Canadian Western Bank. Serving as a full-stack developer and Manager of IT Risk, she engineered high-reliability quantitative credit risk models, real-time data pipelines, and scorecard applications requiring absolute precision and strict regulatory compliance. Her work heavily utilized Java, Spring, Hibernate, C#/.NET, Oracle, and SQL Server, where she specialized in database performance tuning and integrating secure transactional business logic. It was here that she also engineered her first production-grade AI data pipelines, using Java frameworks to build document OCR ingestion systems that fed structured data directly into TensorFlow models.
 
-In recent years, Crystal has shifted her focus toward architecting sovereign cloud infrastructure and multi-tenant SaaS platforms. She has independently designed, deployed, and scaled production-grade applications using Python (FastAPI/Flask), Spring Boot, Node.js, and TypeScript. Her recent work includes building complex, tenant-aware booking systems and asynchronous, AI-driven automation services—such as marketingPy—leveraging serverless AWS Lambda execution, relational database isolation (PostgreSQL/RDS), bidirectional calendar synchronization, and third-party LLM API integrations.
+In recent years, Crystal has shifted her focus toward architecting sovereign cloud infrastructure and [multi-tenant SaaS platforms]({% post_url 2026-03-15-designing-multi-tenant-saas-where-industries-feel-brand %}). She has independently designed, deployed, and scaled production-grade applications using Python (FastAPI/Flask), Spring Boot, Node.js, and TypeScript. Her recent work includes building complex, [tenant-aware booking systems]({% post_url 2026-05-23-setting-up-google-calendar-api-oauth2-for-multi-tenant-booking-engines %}) with [bidirectional calendar synchronization]({% post_url 2026-05-25-google-calendar-and-full-calendar-bidirection %}), and asynchronous, AI-driven automation services—such as [marketingPy]({% post_url 2026-07-08-migrating-marketingpy-to-aws-lambda %})—leveraging serverless AWS Lambda execution, [relational database isolation]({% post_url 2026-05-12-layer2-tenant-resolution %}) (PostgreSQL/RDS), and third-party LLM API integrations.
 
-Her extensive engineering footprint also includes deep mastery of content management frameworks like Drupal and WordPress. Within these ecosystems, she has developed custom PHP modules leveraging the Symfony framework, built advanced decoupled views, and engineered multi-tier sales pipelines integrated with Vue.js and payment gateway APIs like PayPal. On the frontend, her capabilities span vanilla JavaScript, jQuery, SASS, and highly performant component-driven development within React and Angular.
+Her extensive engineering footprint also includes deep mastery of content management frameworks like Drupal and WordPress. Within these ecosystems, she has developed custom PHP modules leveraging the Symfony framework, built advanced decoupled views, and engineered multi-tier sales pipelines integrated with Vue.js and payment gateway APIs like PayPal. On the frontend, her capabilities span vanilla JavaScript, jQuery, SASS, and highly performant [component-driven development]({% post_url 2026-02-03-react-chatbot-widget-feature %}) within React and [Angular]({% post_url 2025-07-10-studio-booking-tutorial %}).
+
+<p style="margin-top: 1.5em;"><strong>Deep dives into craftsmanship:</strong> <a href="/blog/tag/multi-tenant/">multi-tenant architecture</a> &middot; <a href="/blog/tag/serverless-arch/">serverless AWS</a> &middot; <a href="/blog/tag/design-in-code/">design-in-code</a></p>
 
 Operating fluently across Unix-based environments, Git, containerized Docker setups, and automated CI/CD workflows, Crystal treats clean code, comprehensive inline documentation, and system observability as first-class citizens.
 

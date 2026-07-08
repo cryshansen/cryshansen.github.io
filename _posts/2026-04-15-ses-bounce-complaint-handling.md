@@ -11,6 +11,7 @@ tags:
   - spring-boot
   - java
   - deliverability
+  - serverless-arch
 categories:
   - engineering
   - infrastructure

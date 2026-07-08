@@ -12,6 +12,7 @@ tags:
   - marketing
   - scheduling
   - nurture
+  - serverless-arch
 categories:
   - engineering
   - marketing-tech

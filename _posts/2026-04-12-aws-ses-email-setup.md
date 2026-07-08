@@ -10,6 +10,7 @@ tags:
   - devops
   - smtp
   - spring-boot
+  - serverless-arch
 categories:
   - engineering
   - infrastructure

@@ -3,7 +3,7 @@ layout: post
 title: Building a Studio Booking App
 date: 2025-07-10 14:24:00
 description: Ever want to build a booking app and see what is under the hood of such a system?
-tags: angular cart local-storage login authentication booking architecture
+tags: angular cart local-storage login authentication booking architecture design-in-code
 categories: angular-posts
 giscus_comments: false
 related_posts: false

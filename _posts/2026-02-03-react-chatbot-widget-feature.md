@@ -3,7 +3,7 @@ layout: post
 title: Building a Dropin Chatbot Widget for any SPA App
 date: 2026-02-03
 description:
-tags: [react, chatbot, UI, integrations, API]
+tags: [react, chatbot, UI, integrations, API, design-in-code]
 categories: [react-posts]
 giscus_comments: false
 related_posts: true

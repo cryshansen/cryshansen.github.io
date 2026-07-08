@@ -3,7 +3,7 @@ layout: post
 title: "Setting Up Google Calendar API & OAuth 2.0 for Multi-Tenant Booking Engines"
 date: 2026-05-23
 categories: backend architecture
-tags: [google-api, oauth2, java, spring-boot, security]
+tags: [google-api, oauth2, java, spring-boot, security, multi-tenant]
 giscus_comments: true
 related_posts: false
 ---

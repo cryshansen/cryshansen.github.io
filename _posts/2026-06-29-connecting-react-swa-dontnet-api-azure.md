@@ -2,7 +2,7 @@
 layout: post
 title: "Bridging the Gap: Connecting React (Azure SWA) to a Secured .NET 8 API"
 date: 2026-06-29
-tags: [csharp, dotnet, azure, react, swa, architecture, cors]
+tags: [csharp, dotnet, azure, react, swa, architecture, cors, design-in-code]
 categories: [engineering, devops-posts]
 description: A architectural breakdown of resolving Cross-Origin (CORS) cookie authentication constraints between Azure Static Web Apps and Azure App Service.
 toc:
