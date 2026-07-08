@@ -10,8 +10,8 @@ profile:
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Crystal Hansen</p>
-    <p>250 Rue Gary-Carter</p>
-    <p>Montreal, Quebec H2R 0B2</p>
+    <p>private address</p>
+    <p>Moose Jaw, Saskatchewan S6H 6T9</p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
