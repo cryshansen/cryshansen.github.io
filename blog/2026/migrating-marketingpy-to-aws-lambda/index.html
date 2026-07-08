@@ -32,7 +32,7 @@
     <span class="na">ImageUri</span><span class="pi">:</span> <span class="kt">!Ref</span> <span class="s">EcrImageUri</span>
     <span class="na">ImageConfig</span><span class="pi">:</span>
       <span class="na">Command</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">lambda_handler.api_handler"</span><span class="pi">]</span>
-    <span class="na">Timeout</span><span class="pi">:</span> <span class="m">29</span>          <span class="c1"># API Gateway's hard cap is 30s</span>
+    <span class="na">Timeout</span><span class="pi">:</span> <span class="m">29</span> <span class="c1"># API Gateway's hard cap is 30s</span>
     <span class="na">ReservedConcurrentExecutions</span><span class="pi">:</span> <span class="m">5</span>
 
 <span class="na">SchedulerFunction</span><span class="pi">:</span>
